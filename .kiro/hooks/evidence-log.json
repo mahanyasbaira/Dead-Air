@@ -1,0 +1,12 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "log-spec-task-evidence",
+      "description": "After every spec task, append a dated line to docs/KIRO-USAGE.md so the submission write-up is built from facts.",
+      "trigger": "PostTaskExec",
+      "action": { "type": "command", "command": "node scripts/kiro/log-task.mjs" },
+      "timeout": 10
+    }
+  ]
+}

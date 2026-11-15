@@ -1,0 +1,36 @@
+{
+  "name": "dead-air-slice",
+  "description": "Plan one bounded slice, then implement and cold-review it until the reviewer approves (max 3 rounds, then pause for a human).",
+  "inputs": { "task": "prompt" },
+  "steps": [
+    {
+      "type": "step",
+      "id": "plan",
+      "agent": "wf-planner",
+      "artifacts": { "plan": "reports/workflow/plan.md" },
+      "prompt": "Read .kiro/steering and the relevant spec under .kiro/specs. Plan only this slice: {{task}}. Name the requirement numbers it satisfies, the files to touch, the tests to add (including property tests) and how it will be verified. Do not modify source. Write the plan to reports/workflow/plan.md and delete any old reports/workflow/review.md."
+    },
+    {
+      "type": "repeat",
+      "id": "build-loop",
+      "maxIterations": 3,
+      "onMaxIterations": "pause",
+      "stopWhen": "{{review.output}} contains VERDICT: APPROVED",
+      "steps": [
+        {
+          "type": "step",
+          "id": "implement",
+          "agent": "wf-coder",
+          "prompt": "Implement the plan in reports/workflow/plan.md. If reports/workflow/review.md exists, fix its findings first. Run pnpm typecheck and pnpm test and include the real output tail. Do not commit, push or deploy. End with changed files, evidence and limitations."
+        },
+        {
+          "type": "step",
+          "id": "review",
+          "agent": "cold-reader",
+          "artifacts": { "review": "reports/workflow/review.md" },
+          "prompt": "Review the current working tree against reports/workflow/plan.md and the spec requirements it names. Write your findings to reports/workflow/review.md, then end with the verdict line."
+        }
+      ]
+    }
+  ]
+}

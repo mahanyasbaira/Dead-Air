@@ -1,0 +1,40 @@
+{
+  "name": "ship-check",
+  "description": "Three independent read-only checks in parallel (behaviour, accessibility and design, contest rules), merged into one report. Run before every deploy and before submitting.",
+  "steps": [
+    {
+      "type": "parallel",
+      "id": "checks",
+      "joinPolicy": "allSettled",
+      "branches": [
+        {
+          "type": "step",
+          "id": "behaviour",
+          "agent": "semantic_reviewer",
+          "prompt": "Review the whole of src for behavioural bugs against .kiro/specs/*/requirements.md: determinism, garbled frames, collisions, known-set correctness, reload recovery. Do not edit files. Cite file and line."
+        },
+        {
+          "type": "step",
+          "id": "experience",
+          "agent": "cold-reader",
+          "artifacts": { "experience": "reports/workflow/experience.md" },
+          "prompt": "Run the checks, then read src/ui against .kiro/steering/design-language.md and the accessibility requirements in the consoles and seance-replay specs. Write findings to reports/workflow/experience.md."
+        },
+        {
+          "type": "step",
+          "id": "rules",
+          "agent": "wf-planner",
+          "artifacts": { "rules": "reports/workflow/rules.md" },
+          "prompt": "Read the 'Submission checklist' in docs/END-GOAL.md. Check each item against the repository (licence file, .kiro at root and not ignored, README run instructions, no secrets, no third-party trademarks or copyrighted audio). Do not edit source. Write a pass/fail table with evidence to reports/workflow/rules.md."
+        }
+      ]
+    },
+    {
+      "type": "step",
+      "id": "merge",
+      "agent": "wf-review-aggregator",
+      "artifacts": { "report": "reports/workflow/ship-check.md" },
+      "prompt": "Merge the three check results (the behaviour review output below, reports/workflow/experience.md and reports/workflow/rules.md) into reports/workflow/ship-check.md: blocking issues first, then the rest, deduplicated, each with file and line.\n\n{{behaviour.output}}"
+    }
+  ]
+}

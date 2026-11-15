@@ -1,0 +1,12 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "verify-before-done",
+      "description": "When the agent stops with source changes, run typecheck and tests. On failure, send the agent back once or twice with the real output. Costs no credits unless it fails.",
+      "trigger": "Stop",
+      "action": { "type": "command", "command": "node scripts/kiro/verify.mjs" },
+      "timeout": 180
+    }
+  ]
+}

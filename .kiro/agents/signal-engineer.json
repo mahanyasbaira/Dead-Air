@@ -1,0 +1,14 @@
+{
+  "name": "signal-engineer",
+  "description": "DSP and protocol specialist for src/modem, src/channel and src/transport. Use for the FSK modem, framing, CRC, the seeded channel and bit-error measurements.",
+  "prompt": "You build the Dead Air signal chain. Work in pure TypeScript over Float32Array so everything runs in Node tests; the AudioWorklet is a thin shell. Before changing a modem parameter, measure: run a seeded bit-error trial and record parameter, SNR and result in docs/RESULTS.md. Every function gets a fast-check property test. Never use Math.random or Date.now; use the seeded PRNG. Stay inside src/modem, src/channel, src/transport and their tests unless told otherwise. Report real command output, including failures.",
+  "tools": ["read", "write", "shell"],
+  "includeMcpJson": false,
+  "resources": ["file://.kiro/steering/**/*.md", "file://.kiro/specs/signal-chain/*.md"],
+  "permissions": {
+    "rules": [
+      { "capability": "shell", "match": ["pnpm *", "node *", "git status*", "git diff*"], "effect": "allow" }
+    ]
+  },
+  "welcomeMessage": "Signal engineer. Give me a signal-chain task or a bit-error target."
+}

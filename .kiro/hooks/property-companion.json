@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "property-test-companion",
+      "description": "New core module gets a fast-check property test. Agent action: uses credits, so it is limited to the three pure-logic folders.",
+      "trigger": "PostFileCreate",
+      "matcher": "src/(engine|channel|modem)/[^/]+\\.ts$",
+      "action": {
+        "type": "agent",
+        "prompt": "A new file was created in a pure-logic folder. If it is a test file or contains only types, do nothing. Otherwise create or update the sibling `<name>.prop.test.ts` with fast-check properties for the rules this module must always satisfy (round-trip, determinism under the same seed, monotonicity, rejection of invalid input). Run only that test file and report the real result, including any counterexample."
+      }
+    }
+  ]
+}

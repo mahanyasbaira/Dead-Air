@@ -1,0 +1,13 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "guard-outward-and-destructive-shell",
+      "description": "Blocks pushes, deploys, publishes and recursive deletes run by the agent. The human does those by hand.",
+      "trigger": "PreToolUse",
+      "matcher": "shell",
+      "action": { "type": "command", "command": "node scripts/kiro/guard.mjs" },
+      "timeout": 10
+    }
+  ]
+}
