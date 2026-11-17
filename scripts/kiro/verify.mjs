@@ -16,14 +16,18 @@ function run(command) {
   }
 }
 
-// Newest mtime + file count under src: changes whenever the agent edits, adds or removes a file.
+// Newest mtime + file count under the source roots: changes whenever a file is edited, added or removed.
 function sourceFingerprint() {
   let newest = 0;
   let count = 0;
-  for (const entry of readdirSync("src", { recursive: true, withFileTypes: true })) {
-    if (!entry.isFile()) continue;
-    count += 1;
-    newest = Math.max(newest, statSync(join(entry.parentPath, entry.name)).mtimeMs);
+  for (const root of ["src", "packages", "apps", "site"]) {
+    if (!existsSync(root)) continue;
+    for (const entry of readdirSync(root, { recursive: true, withFileTypes: true })) {
+      const path = join(entry.parentPath, entry.name);
+      if (!entry.isFile() || path.includes("node_modules") || path.includes("/dist/")) continue;
+      count += 1;
+      newest = Math.max(newest, statSync(path).mtimeMs);
+    }
   }
   return `${count}:${newest}`;
 }

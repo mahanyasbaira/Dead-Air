@@ -1,23 +1,25 @@
 ---
 inclusion: always
 ---
-# Dead Air — product
+# Product
 
-**One line:** a haunted two-player comms drill. Two people share one unfolding fictional incident, can only talk over a resurrected dead-tech link (an acoustic FSK modem: speaker to microphone, no network), and afterwards watch a replay that proves who knew what, when.
+**Hindsight** is a small kit for building drills where information arrives late, damaged, or never, and a replay afterwards shows what each person knew at the moment they decided. Two applications are built on it.
 
-**Category:** Kiroween 2026 *Resurrection* (dead tech: acoustic modems, teletype, pagers, numbers stations). Deadline Dec 4 2026, 2:00 pm PT. Full plan: `docs/END-GOAL.md`.
+Kiroween 2026, category **Skeleton Crew**. Deadline Dec 4 2026, 2:00 pm PT. Plan and submission checklist: `docs/PLAN.md`.
 
-**Who it is for:** any small team that runs tabletop drills and finds them boring or blame-heavy: on-call engineers, event staff, resident assistants, student orgs. The lesson is that bad calls usually come from late or garbled information, not bad people.
+## The three things
+1. **The kit, `packages/hindsight`.** Append-only event log, pure reducer, seeded lossy channel (delay, drop, damage, collision), a knowledge ledger (who knew what at time t), and the replay view. No audio, no scenario content, no app-specific words. Small enough to read in one sitting.
+2. **Night Desk, `apps/night-desk`.** A solo rehearsal of a resident assistant's duty night, for one person on one laptop. Calls, knocks and messages arrive while you are busy with something else; you choose what to do, and doing anything costs minutes. The replay shows what had reached you at each decision. For new RAs before their first duty night. Scripted, not generated: no server, no model at runtime.
+3. **Dead Air, `apps/dead-air`.** A two-person drill where the only link is sound: one device plays the message through its speaker as FSK tones, the other hears it by microphone. No network. Talking at the same time destroys both messages. For teams that coordinate over a bad line. Falls back to two browser tabs on the simulated channel.
 
-## The three pillars (do not dilute)
-1. **The Wire** — messages travel as sound between devices and can be delayed, garbled, lost, or collide (half-duplex). A seeded simulated channel gives the same behaviour in two tabs or solo.
-2. **The Consoles** — each role plays on a different dead device: Booth (phosphor teletype + live spectrum waterfall) and Tower (pager-style handheld). Polished, strange, audible.
-3. **The Séance** — the debrief: a worldline diagram where roles are vertical lines, messages are diagonal signals whose slope is their delay, and selecting a decision lights up exactly what that role knew. A "what if the line was clear?" toggle replays the same log with zero delay.
+The two apps must stay clearly different (one player vs two, attention as the channel vs sound as the channel) and must share the kit without copying code from it.
 
 ## Rules that always hold
-- Everything is fiction. Every scenario screen carries a visible `FICTION · DRILL` marker. No real places, people, procedures, alerts or advice. No scores for individuals.
-- The engine is deterministic: same scenario + same event log + same seed gives the same state and the same Séance. No LLM at runtime.
-- A judge alone with one laptop must reach the Séance in under 4 minutes (solo mode against a scripted partner).
-- Works offline after first load. No accounts, no server, no paid APIs, no secrets.
-- Accessible: keyboard-complete, text equivalents for every sound and colour, reduced-motion and a mute switch, readable contrast under the CRT effect.
-- Never claim an unrun test, user study, or workflow succeeded. Record evidence in `docs/KIRO-USAGE.md`.
+- **Fiction.** Every scenario is invented: no real institutions, people, policies or procedures. Each app says once, plainly, that it is practice and not a substitute for an organisation's own training.
+- **Out of scope for Night Desk scenarios:** self-harm, sexual misconduct, medical emergencies, weapons. Scenarios cover noise, lockouts, roommate conflict, guest rules, a leak, an ambiguous alarm. Where a situation would need a professional, the option to call one is always present.
+- **No scores, no ranking, no "correct answer".** The replay states facts: what was known, what was still in transit, how long things took.
+- **Deterministic.** Same scenario, same choices, same seed gives the same log and the same replay.
+- **One person, one laptop, under a minute.** A first-time visitor to either app makes a first meaningful choice within 60 seconds, with no sign-up. Dead Air must offer something to a person alone.
+- **Static.** No accounts, no backend, no secrets, no paid APIs. Works offline after first load.
+- **Accessible.** Keyboard-complete, text for every sound, mute always visible, reduced motion respected, WCAG AA.
+- Never claim an unrun test, user session, or workflow succeeded. Record evidence in `docs/KIRO-USAGE.md`.

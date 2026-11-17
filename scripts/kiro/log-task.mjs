@@ -5,7 +5,7 @@ let detail = "";
 try {
   const event = JSON.parse(readFileSync(0, "utf8"));
   const { session_id, cwd, hook_event_name, ...rest } = event;
-  detail = JSON.stringify(rest).slice(0, 300);
+  detail = JSON.stringify(rest).split(`${process.cwd()}/`).join("").slice(0, 300);
 } catch {
   detail = "(no event data)";
 }

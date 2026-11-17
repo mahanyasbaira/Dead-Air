@@ -11,21 +11,21 @@
           "type": "step",
           "id": "behaviour",
           "agent": "semantic_reviewer",
-          "prompt": "Review the whole of src for behavioural bugs against .kiro/specs/*/requirements.md: determinism, garbled frames, collisions, known-set correctness, reload recovery. Do not edit files. Cite file and line."
+          "prompt": "Review packages/ and apps/ for behavioural bugs against .kiro/specs/*/requirements.md: determinism, damaged frames, collisions, ledger correctness, attention and missed-item rules in Night Desk, reload recovery, and the independence of the two apps from each other. Do not edit files. Cite file and line."
         },
         {
           "type": "step",
           "id": "experience",
           "agent": "cold-reader",
           "artifacts": { "experience": "reports/workflow/experience.md" },
-          "prompt": "Run the checks, then read src/ui against .kiro/steering/design-language.md and the accessibility requirements in the consoles and seance-replay specs. Write findings to reports/workflow/experience.md."
+          "prompt": "Run the checks, then read every interface file in apps/, site/ and the kit's replay entry against .kiro/steering/design-language.md (the 'Never' list is binding) and the accessibility requirements in the night-desk, consoles and seance-replay specs. Write findings to reports/workflow/experience.md."
         },
         {
           "type": "step",
           "id": "rules",
           "agent": "wf-planner",
           "artifacts": { "rules": "reports/workflow/rules.md" },
-          "prompt": "Read the 'Submission checklist' in docs/END-GOAL.md. Check each item against the repository (licence file, .kiro at root and not ignored, README run instructions, no secrets, no third-party trademarks or copyrighted audio). Do not edit source. Write a pass/fail table with evidence to reports/workflow/rules.md."
+          "prompt": "Read the 'Submission checklist' in docs/PLAN.md. Check each item against the repository (licence file, .kiro at root and not ignored, two separate application folders, README run instructions, no secrets, font and voice licences recorded, no third-party trademarks or copyrighted audio). Do not edit source. Write a pass/fail table with evidence to reports/workflow/rules.md."
         }
       ]
     },

@@ -1,6 +1,6 @@
 ---
 inclusion: fileMatch
-fileMatchPattern: ["src/modem/**/*", "src/channel/**/*", "src/transport/**/*"]
+fileMatchPattern: ["**/modem/**/*", "**/channel/**/*", "**/transport/**/*"]
 ---
 # Signal chain rules
 
