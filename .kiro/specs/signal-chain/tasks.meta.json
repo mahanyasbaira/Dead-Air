@@ -1,0 +1,157 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "**A1. Seeded PRNG.** Implement `src/channel/prng.ts`: uint32-seeded": [
+      {
+        "executionId": "8ffaa5b6-9e4c-4ad7-98a7-f47cbd6994df",
+        "chatSessionId": "sess_190d5a0c-211e-4b78-8dc1-38346d0435f5",
+        "timestamp": 1794730104195
+      },
+      {
+        "executionId": "8ffaa5b6-9e4c-4ad7-98a7-f47cbd6994df",
+        "chatSessionId": "sess_190d5a0c-211e-4b78-8dc1-38346d0435f5",
+        "timestamp": 1794730109721
+      },
+      {
+        "executionId": "8ffaa5b6-9e4c-4ad7-98a7-f47cbd6994df",
+        "chatSessionId": "sess_190d5a0c-211e-4b78-8dc1-38346d0435f5",
+        "timestamp": 1794730238010
+      }
+    ],
+    "**A2. CRC-16.** Implement `src/modem/crc.ts` over a byte array (polynomial": [
+      {
+        "executionId": "8ffaa5b6-9e4c-4ad7-98a7-f47cbd6994df",
+        "chatSessionId": "sess_190d5a0c-211e-4b78-8dc1-38346d0435f5",
+        "timestamp": 1794730104256
+      },
+      {
+        "executionId": "8ffaa5b6-9e4c-4ad7-98a7-f47cbd6994df",
+        "chatSessionId": "sess_190d5a0c-211e-4b78-8dc1-38346d0435f5",
+        "timestamp": 1794730243189
+      },
+      {
+        "executionId": "8ffaa5b6-9e4c-4ad7-98a7-f47cbd6994df",
+        "chatSessionId": "sess_190d5a0c-211e-4b78-8dc1-38346d0435f5",
+        "timestamp": 1794730332472
+      }
+    ],
+    "**A3. Framing + parse.** Implement `src/modem/frame.ts`: `frame(payload)` and": [
+      {
+        "executionId": "8ffaa5b6-9e4c-4ad7-98a7-f47cbd6994df",
+        "chatSessionId": "sess_190d5a0c-211e-4b78-8dc1-38346d0435f5",
+        "timestamp": 1794730104284
+      },
+      {
+        "executionId": "8ffaa5b6-9e4c-4ad7-98a7-f47cbd6994df",
+        "chatSessionId": "sess_190d5a0c-211e-4b78-8dc1-38346d0435f5",
+        "timestamp": 1794730335528
+      },
+      {
+        "executionId": "8ffaa5b6-9e4c-4ad7-98a7-f47cbd6994df",
+        "chatSessionId": "sess_190d5a0c-211e-4b78-8dc1-38346d0435f5",
+        "timestamp": 1794730465742
+      }
+    ],
+    "**A4. Simulated channel.** Implement `src/channel/channel.ts`: applies delay,": [
+      {
+        "executionId": "8ffaa5b6-9e4c-4ad7-98a7-f47cbd6994df",
+        "chatSessionId": "sess_190d5a0c-211e-4b78-8dc1-38346d0435f5",
+        "timestamp": 1794730104309
+      },
+      {
+        "executionId": "8ffaa5b6-9e4c-4ad7-98a7-f47cbd6994df",
+        "chatSessionId": "sess_190d5a0c-211e-4b78-8dc1-38346d0435f5",
+        "timestamp": 1794730468789
+      },
+      {
+        "executionId": "8ffaa5b6-9e4c-4ad7-98a7-f47cbd6994df",
+        "chatSessionId": "sess_190d5a0c-211e-4b78-8dc1-38346d0435f5",
+        "timestamp": 1794730644551
+      }
+    ],
+    "**A5. Transport interface + loopback + scripted.** Define": [
+      {
+        "executionId": "8ffaa5b6-9e4c-4ad7-98a7-f47cbd6994df",
+        "chatSessionId": "sess_190d5a0c-211e-4b78-8dc1-38346d0435f5",
+        "timestamp": 1794730104331
+      },
+      {
+        "executionId": "8ffaa5b6-9e4c-4ad7-98a7-f47cbd6994df",
+        "chatSessionId": "sess_190d5a0c-211e-4b78-8dc1-38346d0435f5",
+        "timestamp": 1794730647329
+      },
+      {
+        "executionId": "8ffaa5b6-9e4c-4ad7-98a7-f47cbd6994df",
+        "chatSessionId": "sess_190d5a0c-211e-4b78-8dc1-38346d0435f5",
+        "timestamp": 1794730917707
+      }
+    ],
+    "**A6. Engine integration + replay.** Shape channel events so a transport hands": [
+      {
+        "executionId": "8ffaa5b6-9e4c-4ad7-98a7-f47cbd6994df",
+        "chatSessionId": "sess_190d5a0c-211e-4b78-8dc1-38346d0435f5",
+        "timestamp": 1794730104353
+      },
+      {
+        "executionId": "8ffaa5b6-9e4c-4ad7-98a7-f47cbd6994df",
+        "chatSessionId": "sess_190d5a0c-211e-4b78-8dc1-38346d0435f5",
+        "timestamp": 1794730920413
+      },
+      {
+        "executionId": "8ffaa5b6-9e4c-4ad7-98a7-f47cbd6994df",
+        "chatSessionId": "sess_190d5a0c-211e-4b78-8dc1-38346d0435f5",
+        "timestamp": 1794731067903
+      }
+    ],
+    "**B1. FSK modulate/demodulate.** Implement `src/modem/fsk.ts`: binary FSK,": [
+      {
+        "executionId": "8ffaa5b6-9e4c-4ad7-98a7-f47cbd6994df",
+        "chatSessionId": "sess_190d5a0c-211e-4b78-8dc1-38346d0435f5",
+        "timestamp": 1794730104377
+      },
+      {
+        "executionId": "8ffaa5b6-9e4c-4ad7-98a7-f47cbd6994df",
+        "chatSessionId": "sess_190d5a0c-211e-4b78-8dc1-38346d0435f5",
+        "timestamp": 1794731071541
+      },
+      {
+        "executionId": "7c672dfe-44d7-4d98-853c-9194251cd7df",
+        "chatSessionId": "sess_3989df71-b95e-4c85-bb72-2616b124d396",
+        "timestamp": 1794859484447
+      },
+      {
+        "executionId": "7c672dfe-44d7-4d98-853c-9194251cd7df",
+        "chatSessionId": "sess_3989df71-b95e-4c85-bb72-2616b124d396",
+        "timestamp": 1794859668279
+      }
+    ],
+    "**B2. Noise-tolerance trial.** Fixed-seed statistical test: 200 frames at": [
+      {
+        "executionId": "8ffaa5b6-9e4c-4ad7-98a7-f47cbd6994df",
+        "chatSessionId": "sess_190d5a0c-211e-4b78-8dc1-38346d0435f5",
+        "timestamp": 1794730104398
+      }
+    ],
+    "**C1. AudioWorklet shell + acoustic transport.** Implement": [
+      {
+        "executionId": "8ffaa5b6-9e4c-4ad7-98a7-f47cbd6994df",
+        "chatSessionId": "sess_190d5a0c-211e-4b78-8dc1-38346d0435f5",
+        "timestamp": 1794730104427
+      }
+    ],
+    "**C2. Permission fallback.** Mic denied/unavailable → fall back to loopback or": [
+      {
+        "executionId": "8ffaa5b6-9e4c-4ad7-98a7-f47cbd6994df",
+        "chatSessionId": "sess_190d5a0c-211e-4b78-8dc1-38346d0435f5",
+        "timestamp": 1794730104453
+      }
+    ],
+    "**C3. Manual audio checks.** Real speaker→mic at 1 m between two laptops:": [
+      {
+        "executionId": "8ffaa5b6-9e4c-4ad7-98a7-f47cbd6994df",
+        "chatSessionId": "sess_190d5a0c-211e-4b78-8dc1-38346d0435f5",
+        "timestamp": 1794730104488
+      }
+    ]
+  }
+}

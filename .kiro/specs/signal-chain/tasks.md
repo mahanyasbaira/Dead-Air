@@ -17,31 +17,31 @@ evidence, never on an assertion.
 
 ## Phase A — pure byte and event path (no audio)
 
-- [ ] **A1. Seeded PRNG.** Implement `src/channel/prng.ts`: uint32-seeded
+- [x] **A1. Seeded PRNG.** Implement `src/channel/prng.ts`: uint32-seeded
   deterministic stream (`nextUint32`, `nextFloat`, `nextBool(p)`), no `Math.random`
   / `Date.now`. Tests: `prng.test.ts` (known-seed vector) and `prng.prop.test.ts`
   (same seed ⇒ identical stream; stream reproducible after re-seed). _Backs the
   determinism in P4._
 
-- [ ] **A2. CRC-16.** Implement `src/modem/crc.ts` over a byte array (polynomial
+- [x] **A2. CRC-16.** Implement `src/modem/crc.ts` over a byte array (polynomial
   chosen per design open point 2, recorded in `docs/RESULTS.md`). Tests:
   `crc.test.ts` (fixed check value) and `crc.prop.test.ts` — **P2 support**: any
   single-bit change to the input changes the CRC.
 
-- [ ] **A3. Framing + parse.** Implement `src/modem/frame.ts`: `frame(payload)` and
+- [x] **A3. Framing + parse.** Implement `src/modem/frame.ts`: `frame(payload)` and
   `parse(bytes)` (preamble + sync + length + payload ≤64 + CRC-16); typed
   `PayloadTooLargeError`; bad CRC → `garbled` parse result, never a silent fix.
   Tests: `frame.test.ts` (Req 1.3 typed-error example; empty + 64-byte boundaries)
   and `frame.prop.test.ts` — **P1** (round-trip, Req 1.1) and **P2** (single-bit
   flip ⇒ garbled, Req 1.2).
 
-- [ ] **A4. Simulated channel.** Implement `src/channel/channel.ts`: applies delay,
+- [x] **A4. Simulated channel.** Implement `src/channel/channel.ts`: applies delay,
   drop, bit-flip and collision from the PRNG per channel profile and send times;
   emits `received | garbled | collision`. Tests: `channel.test.ts` (Req 3.2
   overlap ⇒ collision to both, deliver neither) and `channel.prop.test.ts` — **P4**
   (determinism, Req 3.1) and **P5** (no delivery before send + min delay, Req 3.3).
 
-- [ ] **A5. Transport interface + loopback + scripted.** Define
+- [x] **A5. Transport interface + loopback + scripted.** Define
   `src/transport/types.ts` (`Transport`: `send(frame)` + `received|garbled|collision`
   events). Implement `src/transport/loopback.ts` (two tabs via `BroadcastChannel`,
   impairments from the A4 channel) and `src/transport/scripted.ts` (solo partner,
@@ -50,7 +50,7 @@ evidence, never on an assertion.
   assert Req 4.1 (both satisfy one interface) and the half-duplex decode-suppression
   state (Req 2.3) at the transport level.
 
-- [ ] **A6. Engine integration + replay.** Shape channel events so a transport hands
+- [x] **A6. Engine integration + replay.** Shape channel events so a transport hands
   the engine exactly one appended event per outcome with sim-time, sender,
   recipient, outcome (Req 5.1). Tests: `src/engine/replay-channel.test.ts`
   (one event per outcome) and `src/engine/replay-channel.prop.test.ts` — **P6**
@@ -62,7 +62,7 @@ and scripted transports are playable in two tabs / solo here._
 
 ## Phase B — FSK modulation (pure DSP, no hardware)
 
-- [ ] **B1. FSK modulate/demodulate.** Implement `src/modem/fsk.ts`: binary FSK,
+- [x] **B1. FSK modulate/demodulate.** Implement `src/modem/fsk.ts`: binary FSK,
   continuous phase, Goertzel/quadrature per symbol, clock recovery from the
   preamble; pure functions over `Float32Array`. Tests: `fsk.test.ts` (known
   tone/sample vectors) and `fsk.prop.test.ts` — **P3** (round-trip at 44.1 and

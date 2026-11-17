@@ -12,3 +12,10 @@ Facts only. This file becomes the "how Kiro was used" section of the submission.
 
 ## Spec task log (automatic)
 
+- 2026-11-15T08:10:38.067Z spec task finished {"spec_name":".kiro/specs/signal-chain/tasks.md","task_name":"**A1. Seeded PRNG.** Implement `src/channel/prng.ts`: uint32-seeded","task_success":true}
+- 2026-11-15T08:12:12.525Z spec task finished {"spec_name":".kiro/specs/signal-chain/tasks.md","task_name":"**A2. CRC-16.** Implement `src/modem/crc.ts` over a byte array (polynomial","task_success":true}
+- 2026-11-15T08:14:25.943Z spec task finished {"spec_name":".kiro/specs/signal-chain/tasks.md","task_name":"**A3. Framing + parse.** Implement `src/modem/frame.ts`: `frame(payload)` and","task_success":true}
+- 2026-11-15T08:17:24.609Z spec task finished {"spec_name":".kiro/specs/signal-chain/tasks.md","task_name":"**A4. Simulated channel.** Implement `src/channel/channel.ts`: applies delay,","task_success":true}
+- 2026-11-15T08:21:57.773Z spec task finished {"spec_name":".kiro/specs/signal-chain/tasks.md","task_name":"**A5. Transport interface + loopback + scripted.** Define","task_success":true}
+- 2026-11-15T08:24:27.960Z spec task finished {"spec_name":".kiro/specs/signal-chain/tasks.md","task_name":"**A6. Engine integration + replay.** Shape channel events so a transport hands","task_success":true}
+- 2026-11-16T20:07:48.469Z spec task finished {"spec_name":".kiro/specs/signal-chain/tasks.md","task_name":"**B1. FSK modulate/demodulate.** Implement `src/modem/fsk.ts`: binary FSK,","task_success":true}
