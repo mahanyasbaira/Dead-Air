@@ -1,32 +1,62 @@
-# Dead Air
+# Hindsight
 
-A haunted two-player comms drill for Kiroween 2026 (category: Resurrection). Two people share one fictional incident at a radio station and can only talk over a resurrected acoustic modem: one device plays the message as sound, the other hears it. Afterwards the Séance replays who knew what, when.
+**A small kit for drills where information arrives late, damaged, or never. Afterwards, a replay shows what each person knew at the moment they decided.**
 
-> Everything is fiction. No real people, places, alerts, procedures or advice.
+Two applications are built on it:
 
-Plan: [`docs/END-GOAL.md`](docs/END-GOAL.md) · Kiro feature map: [`KIRO-CHEATSHEET.md`](KIRO-CHEATSHEET.md) · Kiro evidence log: [`docs/KIRO-USAGE.md`](docs/KIRO-USAGE.md)
+- **Night Desk** — a solo rehearsal of a resident assistant's duty night. Calls, knocks and messages arrive while you are busy with something else.
+- **Dead Air** — two devices whose only link is sound. One plays the message through its speaker; the other hears it through its microphone. No network.
 
-## Run the demo
+Built for Kiroween 2026 (category: Skeleton Crew).
+
+> All scenarios are invented. This is practice, not a substitute for any organisation's own training.
+
+## Status
+
+The repository is mid-move from a single prototype to a kit with two apps.
+
+| | |
+|---|---|
+| Event log, reducer, seeded channel | built, tested |
+| Framing, CRC-16, FSK modem on a clean signal | built, tested |
+| Two-tab and scripted transports | built, tested |
+| Workspace split into `packages/hindsight`, `apps/night-desk`, `apps/dead-air` | specified, not done |
+| Night Desk | specified, not built |
+| Dead Air interface, acoustic link | specified, not built |
+| Replay view | specified, not built |
+| Deployed site, sessions with real users | not yet |
+
+The code currently lives in `src/`; the interface there is the first-day prototype.
+
+## Run it
 
 ```bash
 pnpm install
 pnpm dev        # http://localhost:5173
-pnpm test       # engine + rendered-UI journey tests
+pnpm test       # unit, property and rendered-UI tests
 pnpm build      # typecheck + production build
 ```
 
-## First vertical slice (implemented)
+Requires Node 20 or newer and pnpm 10.
 
-One playable fictional scenario, "Static on Channel 9":
+## How it is built
 
-- **Two roles** (Dispatch, Field Lead) sharing one deterministic timeline, switchable in a single browser.
-- **A delayed message**: Dispatch writes a wind note at sim-minute 2; it reaches the Field Lead at sim-minute 5 — the "dead air" gap.
-- **Recorded decisions**: each role records one choice at the sim-minute it had reached.
-- **A debrief** reconstructing who knew what, when: the created/delivered gap, each decision's sim-time, and the full ordered timeline.
-- Accessibility: keyboard-navigable, info conveyed in text (not color alone), `prefers-reduced-motion` respected, skip link, ARIA tabs/panels.
+The project is developed in [Kiro](https://kiro.dev). The `.kiro/` folder is part of the source:
 
-The simulation engine (`src/engine/`) is pure TypeScript with no UI dependency, so replay is deterministic and unit-tested. See `docs/RESULTS.md` for verification evidence.
+| Folder | Contents |
+|---|---|
+| `.kiro/specs` | Requirements, designs and task lists for the kit, each app, the modem and the replay |
+| `.kiro/steering` | Product, stack and structure rules loaded always; design, signal and testing rules loaded by file type |
+| `.kiro/hooks` | Block pushes and deploys by the agent, verify before finishing, log each completed task, turn a scenario brief into a scenario and its tests |
+| `.kiro/agents` | Four narrow agents: signal chain, interface, scenarios, independent reviewer |
+| `.kiro/workflows` | A build-and-review loop and a three-way pre-release check |
 
-## Status
+Rules that must hold for every input are property tests (`*.prop.test.ts`, using fast-check).
 
-The first slice (deterministic engine, two-role single-browser demo, 13 passing tests) is built. The Wire, the Consoles and the Séance are specified in `.kiro/specs/` and not built yet. Not done: licence, public repository, deployment, user sessions.
+- Plan: [`docs/PLAN.md`](docs/PLAN.md)
+- Measured results and decisions: [`docs/RESULTS.md`](docs/RESULTS.md)
+- Development log: [`docs/KIRO-USAGE.md`](docs/KIRO-USAGE.md)
+
+## Licence
+
+MIT. See [`LICENSE`](LICENSE).

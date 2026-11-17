@@ -6,3 +6,17 @@ coverage/
 .env.*
 !.env.example
 .DS_Store
+
+# local code-intelligence cache (not part of the project)
+.enola/
+
+# private working notes (not part of the submission)
+planning/
+
+# assistant tooling (kept out of the submission)
+.claude/
+CLAUDE.md
+AGENTS.md
+
+# local tool state
+.omx/
