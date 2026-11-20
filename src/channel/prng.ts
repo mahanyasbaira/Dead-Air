@@ -2,7 +2,7 @@
  * Seeded deterministic PRNG for Dead Air.
  *
  * This is the ONLY source of randomness permitted in `src/engine`, `src/channel`
- * and `src/modem` (tech steering). `Math.random` and `Date.now` are banned there,
+ * and the signal-processing code (tech steering). `Math.random` and `Date.now` are banned there,
  * because the whole point of the Wire is reproducibility: the same seed must give
  * the same stream of impairment decisions so a run can be replayed and the Séance
  * is deterministic (design "Determinism contract", backs property P4).

@@ -68,7 +68,7 @@ and scripted transports are playable in two tabs / solo here._
   tone/sample vectors) and `fsk.prop.test.ts` — **P3** (round-trip at 44.1 and
   48 kHz, Req 2.1).
 
-- [ ] **B2. Noise-tolerance trial.** Fixed-seed statistical test: 200 frames at
+- [x] **B2. Noise-tolerance trial.** Fixed-seed statistical test: 200 frames at
   ≥12 dB SNR with seeded white noise; assert ≥95% recovery (Req 2.2) and record the
   measured rate in `docs/RESULTS.md`. Tune tones/baud/sync by measurement, logging
   each change and its bit-error-rate result.

@@ -6,11 +6,15 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit && vite build",
+    "build:flat": "tsc --noEmit && vite build",
+    "build": "pnpm build:flat && pnpm -r --filter \"./packages/*\" --filter \"./apps/*\" build",
     "preview": "vite preview",
-    "test": "vitest run",
+    "test:flat": "vitest run",
+    "test:tooling": "vitest run --config vitest.tooling.config.mjs",
+    "test": "pnpm test:flat && pnpm -r --filter \"./packages/*\" --filter \"./apps/*\" test && pnpm test:tooling",
     "test:watch": "vitest",
-    "typecheck": "tsc --noEmit"
+    "typecheck:flat": "tsc --noEmit",
+    "typecheck": "pnpm typecheck:flat && pnpm -r --filter \"./packages/*\" --filter \"./apps/*\" typecheck"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -24,6 +28,7 @@
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.4",
     "fast-check": "^4.10.2",
+    "hindsight": "workspace:*",
     "jsdom": "^31.0.1",
     "typescript": "^5.6.3",
     "vite": "^5.4.11",

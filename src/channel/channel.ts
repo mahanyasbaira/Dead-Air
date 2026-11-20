@@ -34,7 +34,6 @@
  */
 
 import { Prng } from "./prng";
-import { frame, parse } from "../modem/frame";
 
 /**
  * Impairment parameters for a window of the drill, scripted by the scenario.
@@ -59,7 +58,7 @@ export interface ChannelSend {
   recipient: string;
   /** Sim-time the transmission began. */
   sendTime: number;
-  /** Payload bytes (0–64); the channel frames and may corrupt them. */
+  /** Payload bytes (0–64); the channel may corrupt them. */
   payload: Uint8Array;
   /**
    * Airtime the transmission occupies, in sim-time units. Used only for the
@@ -216,10 +215,8 @@ export function runChannel(
     const simTime = send.sendTime + delay;
 
     if (corrupted) {
-      // A real bit flip trips the modem's CRC: the recipient sees `garbled`,
-      // never a silently repaired payload (requirement 1.2). Verified end-to-end
-      // via the frame/parse round-trip — a frame built from the corrupted bytes
-      // and re-parsed must not come back as a valid copy of the original.
+      // A real bit flip would fail the link's integrity check: the recipient
+      // sees `garbled`, never a silently repaired payload (requirement 1.2).
       events.push({
         kind: "garbled",
         simTime,
@@ -227,9 +224,8 @@ export function runChannel(
         recipient: send.recipient,
       });
     } else {
-      // Clean transit: frame and parse recover the identical payload.
-      const parsed = parse(frame(bytes));
-      const payload = parsed.ok ? parsed.payload : bytes.slice();
+      // Clean transit: the recipient gets an independent copy of the payload.
+      const payload = bytes.slice();
       events.push({
         kind: "received",
         simTime,

@@ -1,0 +1,55 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 **Workspace files and root scripts.** Record the baseline test count in": [
+      {
+        "executionId": "15ca93ba-fce4-47a2-bfb4-1a6b4e35dd5b",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795212320981
+      },
+      {
+        "executionId": "15ca93ba-fce4-47a2-bfb4-1a6b4e35dd5b",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795212436605
+      }
+    ],
+    "1.2 **Package shells.** Create `packages/hindsight`, `apps/dead-air`,": [
+      {
+        "executionId": "155c2235-c98b-48cf-87fe-01a94af9a91c",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795212457253
+      },
+      {
+        "executionId": "155c2235-c98b-48cf-87fe-01a94af9a91c",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795212585934
+      }
+    ],
+    "1. **Phase A: workspace shell (flat repo untouched)**": [
+      {
+        "executionId": "155c2235-c98b-48cf-87fe-01a94af9a91c",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795212586023
+      }
+    ],
+    "2.1 **Decouple the channel from the modem, in place.** Before editing, add": [
+      {
+        "executionId": "226dfed0-723e-4d78-898a-b6e5bdc01ea6",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795212634087
+      },
+      {
+        "executionId": "226dfed0-723e-4d78-898a-b6e5bdc01ea6",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795212782357
+      }
+    ],
+    "2.2 **Generic participants and scenario content out of the engine, in place.**": [
+      {
+        "executionId": "ee8d7829-84e0-45ae-a9df-ca73b3651226",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795212815040
+      }
+    ]
+  }
+}

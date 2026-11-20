@@ -2,8 +2,8 @@
 //
 // The engine integration is satisfied by transports emitting plain event
 // objects the engine understands — the engine never reaches outward into
-// transport/channel/modem (design "Scope and boundaries"; import direction
-// stays one-way `transport -> modem/channel -> engine`). To keep that boundary,
+// transport/channel (design "Scope and boundaries"; import direction
+// stays one-way `transport -> channel -> engine`). To keep that boundary,
 // this module imports NOTHING from those folders. It declares its own local
 // structural type, `ChannelOutcome`, that matches the channel event shape
 // `{ kind, simTime, sender, recipient, payload? }` by structure. Any

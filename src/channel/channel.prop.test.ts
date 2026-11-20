@@ -32,8 +32,8 @@ const arbProfile: fc.Arbitrary<ChannelProfile> = fc
   }));
 
 const arbSend: fc.Arbitrary<ChannelSend> = fc.record({
-  sender: fc.constantFrom("dispatch", "field", "tower", "booth"),
-  recipient: fc.constantFrom("dispatch", "field", "tower", "booth"),
+  sender: fc.constantFrom("p1", "p2", "p3", "p4"),
+  recipient: fc.constantFrom("p1", "p2", "p3", "p4"),
   sendTime: fc.integer({ min: 0, max: 100 }),
   payload: fc.uint8Array({ minLength: 0, maxLength: 64 }),
   airtime: fc.integer({ min: 1, max: 8 }),
