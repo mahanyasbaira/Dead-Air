@@ -413,3 +413,69 @@ supported sample rates.
   `src/engine/engine.test.ts` suite stayed green (11 tests).
 - `pnpm build` → typecheck clean, production build succeeded (36 modules,
   `dist/assets/index-*.js` 154.95 kB / 49.89 kB gzip).
+
+## B2 — Noise-tolerance trial (`src/modem/fsk.noise.test.ts`)
+
+Record of the measured recovery rate for requirement 2.2 (≥95% frame recovery at
+≥12 dB SNR over a 200-frame seeded trial).
+
+### Method
+
+- **Frames:** 200 per run. Payload length is 1–16 bytes, and the bytes are drawn
+  from the seeded PRNG (`src/channel/prng.ts`, seed `0xB2`). No `Math.random` or
+  `Date.now`.
+- **Path:** `frame` → `modulate` → add noise → `demodulate` → `parse`. A frame
+  counts as recovered only if `parse` returns `ok` with a payload identical to the
+  input.
+- **Noise:** white Gaussian noise (Box-Muller over the same PRNG), added at the
+  sample rate. SNR is the mean power of the modulated burst divided by the noise
+  variance, so the noise covers the whole 0 to fs/2 band and is not filtered
+  to the tone band.
+- **Bit-error rate (BER):** demodulated frame bits compared with the transmitted
+  frame bits, before CRC. A missing byte counts as all 8 bits wrong.
+- **Assertion:** recovery ≥ 95% at 12 dB at both 44.1 kHz and 48 kHz. A third test
+  checks that two runs with the same seed give identical results.
+
+### Measured results (seed `0xB2`, run via `pnpm vitest --run src/modem/fsk.noise.test.ts`)
+
+| Sample rate | SNR | Recovered | Recovery rate | BER |
+| --- | --- | --- | --- | --- |
+| 44.1 kHz | 12 dB | 200/200 | 100.0% | 0 (0/25024 bits) |
+| 48 kHz | 12 dB | 200/200 | 100.0% | 0 (0/24712 bits) |
+
+Requirement 2.2 is met with the starting parameters.
+
+### Margin check (informational, not asserted)
+
+I ran the same 200-frame trial at lower SNR with a temporary script, since deleted,
+to see how much margin there is.
+
+| Sample rate | SNR | Recovered | BER |
+| --- | --- | --- | --- |
+| 44.1 kHz | 9, 6, 3, 0 dB | 200/200 at each | 0 at each |
+| 48 kHz | 9, 6, 3, 0 dB | 200/200 at each | 0 at each |
+
+### Tuning log
+
+| Change | Parameter | BER result |
+| --- | --- | --- |
+| None | mark 1200 Hz, space 2200 Hz, 150 baud, preamble 16 bits, sync `0x2D 0xD4` | 0 at 12 dB, both rates |
+
+No tuning was done, because the starting values already pass with no bit errors.
+I did not change tones, baud or sync, so there is no before/after BER to report.
+
+### Limits of this result
+
+- This is a simulated, full-band white-noise channel. Real speaker-to-microphone
+  paths add room reverb, band-limiting, clock drift and non-white noise. Those
+  are covered by the manual checks in C3, not by this trial.
+- Noise-free alignment in this trial starts at sample 0. Clock recovery with a
+  silent lead-in under noise has not been measured here.
+
+### Verification (commands run and observed)
+
+- `pnpm vitest --run src/modem/fsk.noise.test.ts` → **3 passed**.
+- Full `pnpm typecheck`, `pnpm test`, `pnpm build` results are listed below.
+- `pnpm typecheck` → clean.
+- `pnpm test` (full suite) → **100 passed** across 17 files; `src/engine/engine.test.ts` unchanged and green.
+- `pnpm build` → typecheck clean, production build succeeded.
