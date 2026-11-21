@@ -49,6 +49,219 @@
         "executionId": "ee8d7829-84e0-45ae-a9df-ca73b3651226",
         "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
         "timestamp": 1795212815040
+      },
+      {
+        "executionId": "ee8d7829-84e0-45ae-a9df-ca73b3651226",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795214510589
+      }
+    ],
+    "2.3 **Move the engine and channel into the kit.** `mv src/engine": [
+      {
+        "executionId": "39c59167-8755-400c-a895-459097b1dc30",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795214709193
+      },
+      {
+        "executionId": "39c59167-8755-400c-a895-459097b1dc30",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795214868480
+      }
+    ],
+    "2.4 **Move the modem and transport into Dead Air.** `mv src/modem": [
+      {
+        "executionId": "a4a1449e-fdcb-42c1-9fa3-b66131518655",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795214892948
+      },
+      {
+        "executionId": "a4a1449e-fdcb-42c1-9fa3-b66131518655",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795215005830
+      }
+    ],
+    "2.5 **Move the prototype UI, scenarios and entry; remove the root `src/`.**": [
+      {
+        "executionId": "c06e5a6a-ef4f-4504-8e81-cd785cba3052",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795215030829
+      },
+      {
+        "executionId": "c06e5a6a-ef4f-4504-8e81-cd785cba3052",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795215181243
+      }
+    ],
+    "2. **Phase B: the move (seams first, then relocation)**": [
+      {
+        "executionId": "c06e5a6a-ef4f-4504-8e81-cd785cba3052",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795215181311
+      }
+    ],
+    "3.1 **Simulated clock.** Add `packages/hindsight/src/channel/clock.ts` with": [
+      {
+        "executionId": "b01c7116-28a3-4792-a402-b4fa9f42d4ff",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795215221772
+      },
+      {
+        "executionId": "b01c7116-28a3-4792-a402-b4fa9f42d4ff",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795215286586
+      }
+    ],
+    "3.2 **Ledger.** Add optional `id` to `ChannelSend`, `ChannelEvent`,": [
+      {
+        "executionId": "0911f6f9-2c9d-4c28-8993-4ac5ebb8dc12",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795215320322
+      },
+      {
+        "executionId": "0911f6f9-2c9d-4c28-8993-4ac5ebb8dc12",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795215430673
+      }
+    ],
+    "3.3 **Participants are generic.** Add `participants.prop.test.ts` in the kit:": [
+      {
+        "executionId": "33ad7ca5-b260-475e-9909-5ebfb44e8579",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795215452686
+      },
+      {
+        "executionId": "33ad7ca5-b260-475e-9909-5ebfb44e8579",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795215537650
+      }
+    ],
+    "3.4 **Loss-source interface.** Add `LossSource`, `Impairment`, `profileLoss` in": [
+      {
+        "executionId": "6a1a4c69-122a-4a7d-8009-6833f430a8d7",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795215573946
+      },
+      {
+        "executionId": "6a1a4c69-122a-4a7d-8009-6833f430a8d7",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795215677061
+      }
+    ],
+    "3. **Phase C: new kit behavior**": [
+      {
+        "executionId": "6a1a4c69-122a-4a7d-8009-6833f430a8d7",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795215677091
+      }
+    ],
+    "4.1 **Import-boundary check.** Add `scripts/boundaries/check.mjs` (pure": [
+      {
+        "executionId": "4a5bdde5-2657-451e-9129-0a385454592d",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795215717249
+      },
+      {
+        "executionId": "4a5bdde5-2657-451e-9129-0a385454592d",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795215954636
+      }
+    ],
+    "4.2 **Separate replay entry.** Add `packages/hindsight/src/replay/layout.ts`": [
+      {
+        "executionId": "c42fb7bf-10ca-4737-ad30-f4f7c131564e",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795220133660
+      },
+      {
+        "executionId": "c42fb7bf-10ca-4737-ad30-f4f7c131564e",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795220280743
+      }
+    ],
+    "4.3 **Kit README under 150 lines.** Write `packages/hindsight/README.md`: what": [
+      {
+        "executionId": "a9c5b430-f5dd-48bf-8bfc-2441efa8d80b",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795221302924
+      },
+      {
+        "executionId": "a9c5b430-f5dd-48bf-8bfc-2441efa8d80b",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795221573700
+      }
+    ],
+    "4. **Phase D: enforcement and documentation**": [
+      {
+        "executionId": "a9c5b430-f5dd-48bf-8bfc-2441efa8d80b",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795221573778
+      }
+    ],
+    "5.1 **Scenario schema and checks.** Add `engine/scenario-schema.ts`": [
+      {
+        "executionId": "00b0a0b3-d4a7-4b64-b0ea-f1a225e4bf59",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795221609119
+      },
+      {
+        "executionId": "00b0a0b3-d4a7-4b64-b0ea-f1a225e4bf59",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795221814421
+      }
+    ],
+    "5.2 **Brief format.** Add `engine/brief.ts`: `Brief`, `parseBrief`, `printBrief`": [
+      {
+        "executionId": "d04ceece-0486-4461-93bc-aef7c7946d3d",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795221861018
+      },
+      {
+        "executionId": "d04ceece-0486-4461-93bc-aef7c7946d3d",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795222055462
+      }
+    ],
+    "5.3 **Per-app scenario test and the hook.** Add": [
+      {
+        "executionId": "10901ab2-bcb6-4b63-92e7-a732e2ae59c6",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795222112534
+      },
+      {
+        "executionId": "10901ab2-bcb6-4b63-92e7-a732e2ae59c6",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795222260965
+      }
+    ],
+    "5.4 **README: adding a third app.** Fill the marked slot in": [
+      {
+        "executionId": "597a0972-a1c9-4406-a48a-c1a9e2e178b4",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795222303158
+      },
+      {
+        "executionId": "597a0972-a1c9-4406-a48a-c1a9e2e178b4",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795222391821
+      }
+    ],
+    "5. **Phase E: scenario brief, schema and hook**": [
+      {
+        "executionId": "597a0972-a1c9-4406-a48a-c1a9e2e178b4",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795222391915
+      }
+    ],
+    "6.1 **One static site.** Add `site/index.html` (landing, plain HTML and CSS,": [
+      {
+        "executionId": "af793de2-7f96-4864-99a1-fc60f19a17f2",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795222442540
+      },
+      {
+        "executionId": "af793de2-7f96-4864-99a1-fc60f19a17f2",
+        "chatSessionId": "sess_de218ec8-f298-451e-b461-d625684270b9",
+        "timestamp": 1795222562342
       }
     ]
   }

@@ -58,7 +58,7 @@ confirmed re-run evidence, never on an assertion. Move files with `mv`, not `git
   - _Checkpoint: the workspace exists, the flat repo still runs unchanged, baseline count
     unchanged plus the new smoke tests._
 
-- [ ] 2. **Phase B: the move (seams first, then relocation)**
+- [x] 2. **Phase B: the move (seams first, then relocation)**
 
   - [x] 2.1 **Decouple the channel from the modem, in place.** Before editing, add
     `src/channel/channel.golden.test.ts` with golden vectors: for 3 fixed seeds and 2
@@ -71,7 +71,7 @@ confirmed re-run evidence, never on an assertion. Move files with `mv`, not `git
     sender and recipient constants to `p1`..`p4` (generators and assertions
     untouched). Golden test and the full suite pass. _Req 2.3, 4.4._
 
-  - [-] 2.2 **Generic participants and scenario content out of the engine, in place.**
+  - [x] 2.2 **Generic participants and scenario content out of the engine, in place.**
     In `src/engine/types.ts`: add `ParticipantId = string`, make `RoleId` an alias of
     it, widen `Audience` to `ParticipantId | "all"` with a comment that `"all"` is
     reserved, and type `Scenario.decisionPrompts` as `Record<ParticipantId, ...>`.
@@ -85,7 +85,7 @@ confirmed re-run evidence, never on an assertion. Move files with `mv`, not `git
     content. All 100 original tests still pass, including `engine.test.ts`. _Req 2.3,
     2.4._
 
-  - [ ] 2.3 **Move the engine and channel into the kit.** `mv src/engine
+  - [x] 2.3 **Move the engine and channel into the kit.** `mv src/engine
     packages/hindsight/src/engine` and `mv src/channel packages/hindsight/src/channel`
     (tests move with them). Write `packages/hindsight/src/index.ts` exporting, by name,
     the engine and channel items in the design's export table that exist today
@@ -98,7 +98,7 @@ confirmed re-run evidence, never on an assertion. Move files with `mv`, not `git
     dependency on `src/ui/test-setup.ts`. `pnpm test` shows the same test count as
     before 2.3 plus the kit smoke test. _Req 1.3, 2.1._
 
-  - [ ] 2.4 **Move the modem and transport into Dead Air.** `mv src/modem
+  - [x] 2.4 **Move the modem and transport into Dead Air.** `mv src/modem
     apps/dead-air/src/modem` and `mv src/transport apps/dead-air/src/transport`
     (including `fsk.noise.test.ts`, `halfduplex.ts`, loopback and scripted). Replace
     the single relative import of the PRNG in `fsk.noise.test.ts` and the channel
@@ -107,7 +107,7 @@ confirmed re-run evidence, never on an assertion. Move files with `mv`, not `git
     in the app's devDependencies. The kit contains no `modem` folder and no import of
     one. _Req 4.4, 1.3._
 
-  - [ ] 2.5 **Move the prototype UI, scenarios and entry; remove the root `src/`.**
+  - [x] 2.5 **Move the prototype UI, scenarios and entry; remove the root `src/`.**
     `mv src/ui apps/dead-air/src/ui`, `mv src/scenarios apps/dead-air/src/scenarios`,
     `mv src/main.tsx apps/dead-air/src/main.tsx`, move root `index.html` to
     `apps/dead-air/index.html`, merge the root `vite.config.ts` test settings (jsdom
@@ -127,15 +127,15 @@ confirmed re-run evidence, never on an assertion. Move files with `mv`, not `git
     still builds: root `build` leaves the Dead Air output where 6.1 will pick it up, and
     until 6.1 `build` also copies `apps/dead-air/dist` to `dist/`._
 
-- [ ] 3. **Phase C: new kit behavior**
+- [x] 3. **Phase C: new kit behavior**
 
-  - [ ] 3.1 **Simulated clock.** Add `packages/hindsight/src/channel/clock.ts` with
+  - [x] 3.1 **Simulated clock.** Add `packages/hindsight/src/channel/clock.ts` with
     `createClock(start?)`, `now`, `advance`, `advanceTo` per the design; `RangeError`
     on a negative or non-integer advance and on `advanceTo` into the past. Export from
     `index.ts`. Tests: `clock.test.ts` (error cases) and `clock.prop.test.ts` —
     **Property 1**. _Req 2.1._
 
-  - [ ] 3.2 **Ledger.** Add optional `id` to `ChannelSend`, `ChannelEvent`,
+  - [x] 3.2 **Ledger.** Add optional `id` to `ChannelSend`, `ChannelEvent`,
     `ChannelOutcome`, `ChannelLogEntry` (copied only when present; existing deep-equal
     tests must not change). Add `packages/hindsight/src/ledger/ledger.ts`
     (`buildLedger`, `knownAt`, `inTransitAt`, orphan counting) and
@@ -146,7 +146,7 @@ confirmed re-run evidence, never on an assertion. Move files with `mv`, not `git
     pipeline), **Property 3** (known set only grows), **Property 4** (exclusion,
     using the real `runChannel`). _Req 3.1, 3.2, 3.3, 2.1._
 
-  - [ ] 3.3 **Participants are generic.** Add `participants.prop.test.ts` in the kit:
+  - [x] 3.3 **Participants are generic.** Add `participants.prop.test.ts` in the kit:
     **Property 5**. Generators produce 1 to 12 participants with arbitrary distinct
     string ids; the validator-independent checks run now on `eventsForRole`, `reduce`,
     `replay` and the ledger (the validator part of the property is added in 5.1). Fix
@@ -154,7 +154,7 @@ confirmed re-run evidence, never on an assertion. Move files with `mv`, not `git
     that a participant named `"all"` is rejected by the helper that builds a scenario
     fixture. _Req 2.4._
 
-  - [ ] 3.4 **Loss-source interface.** Add `LossSource`, `Impairment`, `profileLoss` in
+  - [x] 3.4 **Loss-source interface.** Add `LossSource`, `Impairment`, `profileLoss` in
     `channel/channel.ts`; `runChannel` accepts `ChannelProfile | LossSource` and wraps a
     profile with `profileLoss` (draw order unchanged: drop, delay, per-bit flips).
     `RangeError` on a negative or non-integer delay from a source. 2.1's golden test and
@@ -165,9 +165,9 @@ confirmed re-run evidence, never on an assertion. Move files with `mv`, not `git
 
   - _Checkpoint: the kit has everything Req 2.1 lists._
 
-- [ ] 4. **Phase D: enforcement and documentation**
+- [x] 4. **Phase D: enforcement and documentation**
 
-  - [ ] 4.1 **Import-boundary check.** Add `scripts/boundaries/check.mjs` (pure
+  - [x] 4.1 **Import-boundary check.** Add `scripts/boundaries/check.mjs` (pure
     `checkBoundaries(files)`), `scripts/boundaries/run.mjs` (reads the workspace, prints
     `file:line specifier rule`, exits 1 on any violation or unreadable file), the rules
     in the design (apps: relative paths stay inside the app, no other app, kit only via
@@ -184,7 +184,7 @@ confirmed re-run evidence, never on an assertion. Move files with `mv`, not `git
     **Property 8**. If the real workspace fails, fix the offending file (a bug the
     move left behind), not the rule. _Req 4.1, 4.2, 4.3, 2.1, 2.3._
 
-  - [ ] 4.2 **Separate replay entry.** Add `packages/hindsight/src/replay/layout.ts`
+  - [x] 4.2 **Separate replay entry.** Add `packages/hindsight/src/replay/layout.ts`
     (pure `layoutReplay(ledger, scenario)`: one row per participant, ticks for
     decisions and knowledge gained, in sim-time order), `ReplayView.tsx` (SVG, no
     canvas) and `replay/index.ts`. Add `tsconfig.replay.json` with `DOM` and `jsx`;
@@ -194,7 +194,7 @@ confirmed re-run evidence, never on an assertion. Move files with `mv`, not `git
     `await import("../index")` succeeds and its export names equal the expected list.
     The real design stays in `seance-replay`. _Req 2.2, 2.1._
 
-  - [ ] 4.3 **Kit README under 150 lines.** Write `packages/hindsight/README.md`: what
+  - [x] 4.3 **Kit README under 150 lines.** Write `packages/hindsight/README.md`: what
     the kit is, the two entries, the public API table, the loss-source interface, and
     the 30-line minimal drill (three participants, one lossy send, one ledger query).
     The example lives in `packages/hindsight/examples/minimal-drill.ts` and the README
@@ -205,9 +205,9 @@ confirmed re-run evidence, never on an assertion. Move files with `mv`, not `git
 
   - _Checkpoint: boundary check green in CI, replay entry loads separately, README tested._
 
-- [ ] 5. **Phase E: scenario brief, schema and hook**
+- [x] 5. **Phase E: scenario brief, schema and hook**
 
-  - [ ] 5.1 **Scenario schema and checks.** Add `engine/scenario-schema.ts`
+  - [x] 5.1 **Scenario schema and checks.** Add `engine/scenario-schema.ts`
     (`validateScenario(unknown)`, never throws, returns all errors with a path) and
     `engine/scenario-check.ts` (`checkScenario` with `validates`, `beats-reachable`,
     `run-ends`, `decisions-have-options`). Export both. Tests: `scenario-schema.test.ts`
@@ -215,7 +215,7 @@ confirmed re-run evidence, never on an assertion. Move files with `mv`, not `git
     `scenario-schema.prop.test.ts` — **Property 10**; extend 3.3's generator with
     `validateScenario` so **Property 5** covers the validator. _Req 5.1._
 
-  - [ ] 5.2 **Brief format.** Add `engine/brief.ts`: `Brief`, `parseBrief`, `printBrief`
+  - [x] 5.2 **Brief format.** Add `engine/brief.ts`: `Brief`, `parseBrief`, `printBrief`
     per the grammar in the design (title, participants, beats with times, decisions;
     `|` escaped as `\|`; errors carry 1-based line numbers). Add
     `docs/scenario-brief.md` with the format and one worked example, and a Night Desk
@@ -225,7 +225,7 @@ confirmed re-run evidence, never on an assertion. Move files with `mv`, not `git
     `brief.prop.test.ts` — **Property 9** (round trip). Export from `index.ts`.
     _Req 5.1._
 
-  - [ ] 5.3 **Per-app scenario test and the hook.** Add
+  - [x] 5.3 **Per-app scenario test and the hook.** Add
     `apps/dead-air/scenarios/` and `apps/night-desk/scenarios/` each with
     `scenarios.test.ts` that globs every scenario file in its folder and runs
     `validateScenario` and `checkScenario` on each. Move Dead Air's "Static on Channel
@@ -240,7 +240,7 @@ confirmed re-run evidence, never on an assertion. Move files with `mv`, not `git
     Night Desk example brief round-trips through `parseBrief` and `printBrief`. Record
     in `docs/KIRO-USAGE.md` only after the hook has actually been run once. _Req 5.2._
 
-  - [ ] 5.4 **README: adding a third app.** Fill the marked slot in
+  - [x] 5.4 **README: adding a third app.** Fill the marked slot in
     `packages/hindsight/README.md`: write a brief, save it under `scenarios/briefs/`,
     let the hook produce the scenario file, run the shared test; plus the five-line
     checklist for a new app (own folder, `hindsight: workspace:*`, a `LossSource`,
@@ -249,7 +249,7 @@ confirmed re-run evidence, never on an assertion. Move files with `mv`, not `git
 
 - [ ] 6. **Phase F: site and prototype retirement**
 
-  - [ ] 6.1 **One static site.** Add `site/index.html` (landing, plain HTML and CSS,
+  - [x] 6.1 **One static site.** Add `site/index.html` (landing, plain HTML and CSS,
     links to `/night-desk/` and `/dead-air/`, the one-line practice notice from
     `product.md`). Add `scripts/site/assemble.mjs` exporting `assemble(root)`: copies
     `site/` to `dist/`, each app's `dist` to `dist/night-desk` and `dist/dead-air`, and
