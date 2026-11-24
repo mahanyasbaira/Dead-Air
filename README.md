@@ -4,7 +4,7 @@
 
 Two applications are built on it:
 
-- **Night Desk** — a solo rehearsal of a resident assistant's duty night. Calls, knocks and messages arrive while you are busy with something else.
+- **Night Desk** — a solo rehearsal of a residence-hall assistant's duty night. Calls, knocks and messages arrive while you are busy with something else.
 - **Dead Air** — two devices whose only link is sound. One plays the message through its speaker; the other hears it through its microphone. No network.
 
 Built for Kiroween 2026 (category: Skeleton Crew).
@@ -18,7 +18,7 @@ The repository is mid-move from a single prototype to a kit with two apps.
 | | |
 |---|---|
 | Event log, reducer, seeded channel | built, tested |
-| Framing, CRC-16, FSK modem on a clean signal | built, tested |
+| Framing, CRC-16, tone encoding on a clean signal | built, tested |
 | Two-tab and scripted transports | built, tested |
 | Workspace split into `packages/hindsight`, `apps/night-desk`, `apps/dead-air` | specified, not done |
 | Night Desk | specified, not built |
@@ -26,7 +26,7 @@ The repository is mid-move from a single prototype to a kit with two apps.
 | Replay view | specified, not built |
 | Deployed site, sessions with real users | not yet |
 
-The code currently lives in `src/`; the interface there is the first-day prototype.
+The code lives in `packages/hindsight` (the kit), `apps/dead-air` and `apps/night-desk`.
 
 ## Run it
 
@@ -45,7 +45,7 @@ The project is developed in [Kiro](https://kiro.dev). The `.kiro/` folder is par
 
 | Folder | Contents |
 |---|---|
-| `.kiro/specs` | Requirements, designs and task lists for the kit, each app, the modem and the replay |
+| `.kiro/specs` | Requirements, designs and task lists for the kit, each app, the signal chain and the replay |
 | `.kiro/steering` | Product, stack and structure rules loaded always; design, signal and testing rules loaded by file type |
 | `.kiro/hooks` | Block pushes and deploys by the agent, verify before finishing, log each completed task, turn a scenario brief into a scenario and its tests |
 | `.kiro/agents` | Four narrow agents: signal chain, interface, scenarios, independent reviewer |

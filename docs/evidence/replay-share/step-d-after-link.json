@@ -1,0 +1,14 @@
+{
+  "runLength": 422,
+  "runSha256": "e4489e213116a3a5463d9823a5540df36ad188ce2da36185e28b7701c06af0a7",
+  "role": "dispatch",
+  "h2": [
+    "A shared replay"
+  ],
+  "buttons": [
+    "Mute",
+    "Clear line",
+    "Copy summary",
+    "Start a drill"
+  ]
+}

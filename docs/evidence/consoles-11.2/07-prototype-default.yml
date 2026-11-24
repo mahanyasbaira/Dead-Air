@@ -1,0 +1,24 @@
+- generic [ref=f10e3]:
+  - link "Skip to main content" [ref=f10e4] [cursor=pointer]:
+    - /url: "#main"
+  - note "Simulation notice" [ref=f10e5]:
+    - text: SIMULATION — fictional exercise, not real
+    - generic [ref=f10e6]: "Demo mode: all data is synthetic. No accounts, network alerts, or real advice."
+  - banner [ref=f10e7]:
+    - heading "Static on Channel 9" [level=1] [ref=f10e8]
+    - paragraph [ref=f10e9]: SIMULATION — a fictional tabletop exercise. No real people, places, alerts, or advice.
+  - main [ref=f10e10]:
+    - region "About this exercise" [ref=f10e11]:
+      - heading "About this exercise" [level=2] [ref=f10e12]
+      - paragraph [ref=f10e13]: A small volunteer radio crew is running a pretend outdoor-festival coverage drill. Two roles share one timeline, but one weather note takes a while to get through.
+      - heading "Roles" [level=2] [ref=f10e14]
+      - list [ref=f10e15]:
+        - listitem [ref=f10e16]:
+          - strong [ref=f10e17]: "Dispatch (fictional):"
+          - text: Sits at the make-believe base table and hears incoming notes first.
+        - listitem [ref=f10e18]:
+          - strong [ref=f10e19]: "Field Lead (fictional):"
+          - text: Out at the pretend stage area; relies on radio to learn anything.
+      - paragraph [ref=f10e20]: You will switch between both roles in one browser. This is a demonstration, not secure multi-user access control. One fictional message is delayed on purpose — watch for the "dead air".
+      - button "Start the exercise" [ref=f10e21] [cursor=pointer]
+  - contentinfo [ref=f10e22]: Dead Air is a fictional tabletop SIMULATION built for discussion. It is not an emergency product and gives no real-world advice.

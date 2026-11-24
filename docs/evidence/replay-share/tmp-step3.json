@@ -1,0 +1,27 @@
+{
+  "ta": null,
+  "items": [
+    "When did each role first have the wind information? How big was the gap?",
+    "Did a decision get recorded before the delayed note arrived? What changed after?",
+    "What low-tech habit might shrink the dead air next time? (Discussion, not policy.)",
+    "sim-minute 0: Dispatch (fictional) learned Drill begins.",
+    "sim-minute 0: Field Lead (fictional) learned Drill begins.",
+    "Message from Dispatch (fictional) at sim-minute 0, Dispatch (fictional) to Field Lead (fictional): sent at sim-minute 0, arrived sim-minute 3.",
+    "sim-minute 1: Field Lead (fictional) learned Field sees a gust.",
+    "sim-minute 2: Dispatch (fictional) learned Dispatch writes a wind note.",
+    "sim-minute 3: Dispatch (fictional) learned Crowd grows.",
+    "sim-minute 3: Field Lead (fictional) learned Crowd grows.",
+    "sim-minute 3: Dispatch (fictional) decided: Suggest holding the acoustic set."
+  ],
+  "h": [
+    "The drill was ended early"
+  ],
+  "store": [
+    "dead-air:run:role",
+    "dead-air:run"
+  ],
+  "storeLen": {
+    "dead-air:run:role": 8,
+    "dead-air:run": 422
+  }
+}

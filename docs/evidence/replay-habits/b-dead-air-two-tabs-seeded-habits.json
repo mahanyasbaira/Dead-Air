@@ -1,0 +1,34 @@
+{
+  "mode": "loopback, seeded in localStorage, resumed by the app",
+  "head": [
+    "Participant",
+    "Transmissions",
+    "Mean bytes",
+    "Mean time on the line",
+    "Collisions involved",
+    "Collisions begun second",
+    "Read back"
+  ],
+  "rows": [
+    [
+      "Dispatch (fictional)",
+      "1",
+      "11",
+      "4",
+      "0",
+      "0",
+      "Not recorded"
+    ],
+    [
+      "Field Lead (fictional)",
+      "Not known here",
+      "Not known here",
+      "Not known here",
+      "Not known here",
+      "Not known here",
+      "Not known here"
+    ]
+  ],
+  "footRows": 0,
+  "limitNoteCount": 1
+}

@@ -1,0 +1,17 @@
+- main "Dead air" [ref=f1e3]:
+  - generic [ref=f1e4]:
+    - paragraph [ref=f1e5]: Fiction. Practice drill.
+    - button "Mute" [ref=f1e6] [cursor=pointer]
+  - heading "Dead air" [level=1] [ref=f1e7]
+  - paragraph [ref=f1e8]: A two-person drill where the only link between you is sound, and a replay of what each of you knew when you decided.
+  - list [ref=f1e9]:
+    - listitem [ref=f1e10]:
+      - button "Solo" [ref=f1e11] [cursor=pointer]
+      - paragraph [ref=f1e12]: Play against a scripted partner on this device.
+    - listitem [ref=f1e13]:
+      - button "Two tabs" [ref=f1e14] [cursor=pointer]
+      - paragraph [ref=f1e15]: Open a second tab on this device and play across the two.
+    - listitem [ref=f1e16]:
+      - button "Two devices by sound" [ref=f1e17] [cursor=pointer]
+      - paragraph [ref=f1e18]: Two devices talk through speaker and microphone, with no network.
+  - status [ref=f1e19]

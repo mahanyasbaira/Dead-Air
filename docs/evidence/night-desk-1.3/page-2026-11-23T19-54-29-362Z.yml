@@ -1,0 +1,5 @@
+- main [ref=e3]:
+  - heading "Night Desk" [level=1] [ref=e4]
+  - paragraph [ref=e5]: A rehearsal of a duty night, for new resident assistants before their first one.
+  - paragraph [ref=e6]: This is practice with invented scenarios. It does not replace your own organisation’s training.
+  - button "Start" [active] [ref=e8] [cursor=pointer]

@@ -1,0 +1,84 @@
+{
+  "mode": "solo, played through the UI",
+  "caption": "Channel habits: plain counts from this record, one row per participant.",
+  "head": [
+    "Participant",
+    "Transmissions",
+    "Mean bytes",
+    "Mean time on the line",
+    "Collisions involved",
+    "Collisions begun second",
+    "Read back"
+  ],
+  "rows": [
+    [
+      "Dispatch (fictional)",
+      "2",
+      "11.5",
+      "4",
+      "0",
+      "0",
+      "Not recorded"
+    ],
+    [
+      "Field Lead (fictional)",
+      "0",
+      "Not recorded",
+      "Not recorded",
+      "0",
+      "0",
+      "Not recorded"
+    ]
+  ],
+  "savedLog": [
+    {
+      "kind": "send",
+      "send": {
+        "id": "dispatch-0",
+        "sender": "dispatch",
+        "recipient": "field",
+        "sendTime": 0,
+        "bytes": 11,
+        "airtime": 4
+      }
+    },
+    {
+      "kind": "wire",
+      "event": {
+        "id": "dispatch-0",
+        "kind": "received",
+        "simTime": 3,
+        "sender": "dispatch",
+        "recipient": "field",
+        "payload": "d2luZCByaXNpbmc="
+      }
+    },
+    {
+      "kind": "send",
+      "send": {
+        "id": "dispatch-1",
+        "sender": "dispatch",
+        "recipient": "field",
+        "sendTime": 4,
+        "bytes": 12,
+        "airtime": 4
+      }
+    },
+    {
+      "kind": "wire",
+      "event": {
+        "id": "dispatch-1",
+        "kind": "received",
+        "simTime": 7,
+        "sender": "dispatch",
+        "recipient": "field",
+        "payload": "aG9sZCB0aGUgc2V0"
+      }
+    },
+    {
+      "kind": "decision",
+      "event": {}
+    }
+  ],
+  "footRows": 0
+}

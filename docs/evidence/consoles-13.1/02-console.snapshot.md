@@ -1,0 +1,44 @@
+- generic [ref=f13e21]:
+  - banner [ref=f13e22]:
+    - paragraph [ref=f13e23]: Fiction. Practice drill.
+    - button "Mute" [ref=f13e24] [cursor=pointer]
+  - heading "Static on Channel 9" [level=1] [ref=f13e25]
+  - main [ref=f13e26]:
+    - region "What you know" [ref=f13e40]:
+      - heading "What you know" [level=2] [ref=f13e41]
+      - list [ref=f13e42]:
+        - listitem [ref=f13e43]:
+          - generic [ref=f13e44]: sim-minute 0
+          - text: Drill begins. Both roles are told the pretend festival is calm and the sky is clear. This is a practice exercise only.
+    - region "Booth" [ref=f13e45]:
+      - heading "Booth" [level=2] [ref=f13e46]
+      - paragraph [ref=f13e47]: Carrier Carrier idle.
+      - paragraph [ref=f13e48]: "Signal level: not measured in this mode."
+      - region "Teleprinter" [ref=f13e49]:
+        - paragraph [ref=f13e50]: Nothing has arrived yet.
+      - form "Composer" [ref=f13e51]:
+        - text: Message
+        - textbox "Message" [ref=f13e52]
+        - paragraph [ref=f13e53]: 64 bytes left. About 0.37 s on air.
+        - paragraph [ref=f13e54]: Type a message to send.
+        - button "Send" [disabled] [ref=f13e55]
+        - paragraph [ref=f13e56]: Enter sends.
+    - region "As Dispatch, what do you note in the pretend log before the drill ends? (Discussion only — not real advice.)" [ref=f13e57]:
+      - paragraph [ref=f13e58]: As Dispatch, what do you note in the pretend log before the drill ends? (Discussion only — not real advice.)
+      - list [ref=f13e59]:
+        - listitem [ref=f13e60]:
+          - button "Suggest holding the acoustic set" [ref=f13e61] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f13e62]: "1"
+        - listitem [ref=f13e64]:
+          - button "Suggest continuing as planned" [ref=f13e65] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f13e66]: "2"
+        - listitem [ref=f13e68]:
+          - button "Ask Field Lead for a status check" [ref=f13e69] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f13e70]: "3"
+    - paragraph [ref=f13e72]: Sim-minute 0 of 6. Time moves when a message arrives.
+    - paragraph [ref=f13e73]:
+      - button "See the replay" [ref=f13e74] [cursor=pointer]
+      - button "Back to the start" [ref=f13e75] [cursor=pointer]
+  - contentinfo [ref=f13e38]:
+    - status [ref=f13e39]:
+      - paragraph [ref=f13e76]: Time moves when a message arrives.

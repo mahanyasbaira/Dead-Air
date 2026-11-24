@@ -1,0 +1,28 @@
+- generic [ref=f5e4]:
+  - banner [ref=f5e5]:
+    - paragraph [ref=f5e6]: Fiction. Practice drill.
+    - button "Mute" [ref=f5e7] [cursor=pointer]
+  - heading "Static on Channel 9" [level=1] [ref=f5e8]
+  - main [ref=f5e9]:
+    - region "The drill is over" [ref=f5e57]:
+      - heading "The drill is over" [active] [level=2] [ref=f5e58]
+      - paragraph [ref=f5e59]: This is what reached each role, and when, as they chose.
+      - 'list "Replay: Static on Channel 9" [ref=f5e60]':
+        - 'listitem "Dispatch (fictional): 4 marks" [ref=f5e61]':
+          - generic [ref=f5e62]: Dispatch (fictional)
+          - 'generic "decision at 0: Suggest holding the acoustic set" [ref=f5e63]'
+          - 'generic "knowledge at 0: Drill begins" [ref=f5e65]'
+          - 'generic "knowledge at 2: Dispatch writes a wind note" [ref=f5e67]'
+          - 'generic "knowledge at 3: Crowd grows" [ref=f5e69]'
+        - 'listitem "Field Lead (fictional): 5 marks" [ref=f5e71]':
+          - generic [ref=f5e72]: Field Lead (fictional)
+          - 'generic "knowledge at 0: Drill begins" [ref=f5e73]'
+          - 'generic "knowledge at 1: Field sees a gust" [ref=f5e75]'
+          - 'generic "knowledge at 3: Crowd grows" [ref=f5e77]'
+          - 'generic "knowledge at 3: Message 1 from dispatch" [ref=f5e79]'
+          - 'generic "knowledge at 7: Message 2 from dispatch" [ref=f5e81]'
+      - paragraph [ref=f5e83]:
+        - button "Run again" [ref=f5e84] [cursor=pointer]
+  - contentinfo [ref=f5e54]:
+    - status [ref=f5e55]:
+      - paragraph [ref=f5e56]: Resumed your saved run.

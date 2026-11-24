@@ -1,0 +1,51 @@
+- generic [ref=f14e4]:
+  - banner [ref=f14e5]:
+    - paragraph [ref=f14e6]: Fiction. Practice drill.
+    - button "Mute" [ref=f14e7] [cursor=pointer]
+  - heading "Static on Channel 9" [level=1] [ref=f14e8]
+  - main [ref=f14e9]:
+    - region "What you know" [ref=f14e10]:
+      - heading "What you know" [level=2] [ref=f14e11]
+      - list [ref=f14e12]:
+        - listitem [ref=f14e13]:
+          - generic [ref=f14e14]: sim-minute 0
+          - text: Drill begins. Both roles are told the pretend festival is calm and the sky is clear. This is a practice exercise only.
+        - listitem [ref=f14e15]:
+          - generic [ref=f14e16]: sim-minute 2
+          - text: "Dispatch writes a wind note. Dispatch composes a fictional note: \"Wind picking up near the stage — consider pausing the acoustic set.\" It is sent over a flaky radio link."
+        - listitem [ref=f14e17]:
+          - generic [ref=f14e18]: sim-minute 3
+          - text: Crowd grows. Both roles hear that more pretend attendees are arriving at the stage.
+    - region "Booth" [ref=f14e19]:
+      - heading "Booth" [level=2] [ref=f14e20]
+      - paragraph [ref=f14e21]: Carrier Carrier idle.
+      - paragraph [ref=f14e22]: "Signal level: not measured in this mode."
+      - region "Teleprinter" [ref=f14e23]:
+        - paragraph [ref=f14e24]: Nothing has arrived yet.
+      - form "Composer" [ref=f14e25]:
+        - text: Message
+        - textbox "Message" [ref=f14e26]
+        - paragraph [ref=f14e27]: 64 bytes left. About 0.37 s on air.
+        - paragraph [ref=f14e28]: Type a message to send.
+        - button "Send" [disabled] [ref=f14e29]
+        - paragraph [ref=f14e30]: Enter sends.
+    - region "As Dispatch, what do you note in the pretend log before the drill ends? (Discussion only — not real advice.)" [ref=f14e31]:
+      - paragraph [ref=f14e32]: As Dispatch, what do you note in the pretend log before the drill ends? (Discussion only — not real advice.)
+      - list [ref=f14e33]:
+        - listitem [ref=f14e34]:
+          - button "Suggest holding the acoustic set" [pressed] [ref=f14e35] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f14e36]: "1"
+        - listitem [ref=f14e38]:
+          - button "Suggest continuing as planned" [ref=f14e39] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f14e40]: "2"
+        - listitem [ref=f14e42]:
+          - button "Ask Field Lead for a status check" [ref=f14e43] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f14e44]: "3"
+      - paragraph [ref=f14e46]: "You chose: Suggest holding the acoustic set at sim-minute 3."
+    - paragraph [ref=f14e47]: Sim-minute 3 of 6. Time moves when a message arrives.
+    - paragraph [ref=f14e48]:
+      - button "See the replay" [ref=f14e49] [cursor=pointer]
+      - button "Back to the start" [ref=f14e50] [cursor=pointer]
+  - contentinfo [ref=f14e51]:
+    - status [ref=f14e52]:
+      - paragraph [ref=f14e53]: Resumed your saved run.

@@ -1,0 +1,5 @@
+# Consoles 13.2 evidence
+
+- `snapshot-styles.js`, `snapshot-styles-after.js`, `snapshot-styles-diff.js`: Playwright snippets (run with `browser_run_code_unsafe`). They compare computed styles (28 properties plus size) of every element on the entry and run screens, light and dark, between a build made before the `shell/base.css` change (served on 4801) and after it (4802). Final run: 0 differing rows. The first run found one: `footer` font-size 13px became 15px, so a `footer` rule was added to `base.css`.
+- `offline-reload.js` with `offline-1-online-after-send.png` and `offline-2-after-offline-reload.png`: load `/dead-air/` from a static server, start a solo run, send once, set the browser context offline, reload.
+  Result: the reload fails with `net::ERR_INTERNET_DISCONNECTED` on `http://127.0.0.1:4802/dead-air/` and the browser error page is shown. Before going offline, localStorage held `dead-air:run` and `dead-air:run:role`, so the run was saved. The app cannot restore it offline because the page itself is not cached. No service worker exists.

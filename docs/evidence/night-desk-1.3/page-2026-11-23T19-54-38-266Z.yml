@@ -1,0 +1,33 @@
+- main [ref=e9]:
+  - progressbar "Guide progress" [ref=e10]
+  - generic [ref=e11]:
+    - heading [active] [level=1] [ref=e12]:
+      - time [ref=e13]: 11:10 pm
+    - paragraph [ref=e14]: Guided first night
+  - region "Reached you" [ref=e15]:
+    - heading "Reached you" [level=2] [ref=e16]
+    - list [ref=e17]:
+      - listitem [ref=e18]:
+        - paragraph [ref=e19]:
+          - text: Duty phone, sent
+          - time [ref=e20]: 11:10 pm
+        - paragraph [ref=e21]: "Priya in 204 writes: The music in 206 is loud again. Could someone come and ask them to turn it down?"
+  - region "What do you do?" [ref=e22]:
+    - heading "What do you do?" [level=2] [ref=e23]
+    - paragraph [ref=e24]: Read the text and choose what to do.
+    - list [ref=e25]:
+      - listitem [ref=e26]:
+        - button "1 Read the text and reply that you are on your way 5 min" [ref=e27] [cursor=pointer]:
+          - generic [ref=e28]: "1"
+          - generic [ref=e29]: Read the text and reply that you are on your way
+          - generic [ref=e30]: 5 min
+      - listitem [ref=e31]:
+        - button "C Phone Ms Alder, the staff member on call 3 min" [ref=e32] [cursor=pointer]:
+          - generic [ref=e33]: C
+          - generic [ref=e34]: Phone Ms Alder, the staff member on call
+          - generic [ref=e35]: 3 min
+      - listitem [ref=e36]:
+        - button "W Wait a couple of minutes 2 min" [ref=e37] [cursor=pointer]:
+          - generic [ref=e38]: W
+          - generic [ref=e39]: Wait a couple of minutes
+          - generic [ref=e40]: 2 min

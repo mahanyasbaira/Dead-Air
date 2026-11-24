@@ -1,0 +1,23 @@
+{
+  "url": "http://127.0.0.1:5611/dead-air/#s=eyJ2IjoxLCJzIjoic3RhdGljLW9uLWNoYW5uZWwtOSIsInAiOltbImRpc3BhdGNoIiwiRGlzcGF0Y2ggKGZpY3Rpb25hbCkiLG51bGwsbnVsbF0sWyJmaWVsZCIsIkZpZWxkIExlYWQgKGZpY3Rpb25hbCkiLG51bGwsbnVsbF1dLCJlIjpbWyJzIiwiZGlzcGF0Y2gtMCIsImRpc3BhdGNoIiwiZmllbGQiLDAsMTIsbnVsbF0sWyJsIiwiZGlzcGF0Y2giLCJEcmlsbCBiZWdpbnMiLDBdLFsibCIsImZpZWxkIiwiRHJpbGwgYmVnaW5zIiwwXSxbImwiLCJmaWVsZCIsIkZpZWxkIHNlZXMgYSBndXN0IiwxXSxbImwiLCJkaXNwYXRjaCIsIkRpc3BhdGNoIHdyaXRlcyBhIHdpbmQgbm90ZSIsMl0sWyJsIiwiZGlzcGF0Y2giLCJDcm93ZCBncm93cyIsM10sWyJsIiwiZmllbGQiLCJDcm93ZCBncm93cyIsM10sWyJvIiwiZGlzcGF0Y2gtMCIsInJlY2VpdmVkIiwzXV0sImQiOltbImRlY2lzaW9uLWRpc3BhdGNoIiwiZGlzcGF0Y2giLDMsIlN1Z2dlc3QgaG9sZGluZyB0aGUgYWNvdXN0aWMgc2V0Il1dfQ",
+  "storageKeys": [
+    "dead-air:run:role",
+    "dead-air:run"
+  ],
+  "items": [
+    "When did each role first have the wind information? How big was the gap?",
+    "Did a decision get recorded before the delayed note arrived? What changed after?",
+    "What low-tech habit might shrink the dead air next time? (Discussion, not policy.)",
+    "sim-minute 0: Dispatch (fictional) learned Drill begins.",
+    "sim-minute 0: Field Lead (fictional) learned Drill begins.",
+    "Message from Dispatch (fictional) at sim-minute 0, Dispatch (fictional) to Field Lead (fictional): sent at sim-minute 0, arrived sim-minute 3.",
+    "sim-minute 1: Field Lead (fictional) learned Field sees a gust.",
+    "sim-minute 2: Dispatch (fictional) learned Dispatch writes a wind note.",
+    "sim-minute 3: Dispatch (fictional) learned Crowd grows.",
+    "sim-minute 3: Field Lead (fictional) learned Crowd grows.",
+    "sim-minute 3: Dispatch (fictional) decided: Suggest holding the acoustic set."
+  ],
+  "summary": [
+    "2 participants: Dispatch (fictional) and Field Lead (fictional). 1 message was sent: 1 arrived intact and 0 were lost or never arrived. The longest delay ran from sim-minute 0 to sim-minute 3. 1 decision was made."
+  ]
+}

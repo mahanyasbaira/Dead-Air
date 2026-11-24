@@ -1,0 +1,27 @@
+- generic [ref=f14e4]:
+  - banner [ref=f14e5]:
+    - paragraph [ref=f14e6]: Fiction. Practice drill.
+    - button "Mute" [ref=f14e7] [cursor=pointer]
+  - heading "Static on Channel 9" [level=1] [ref=f14e8]
+  - main [ref=f14e9]:
+    - region "The drill was ended early" [ref=f14e54]:
+      - heading "The drill was ended early" [active] [level=2] [ref=f14e55]
+      - paragraph [ref=f14e56]: You ended the drill before its last beat. This is what had reached each role by then.
+      - 'list "Replay: Static on Channel 9" [ref=f14e57]':
+        - 'listitem "Dispatch (fictional): 4 marks" [ref=f14e58]':
+          - generic [ref=f14e59]: Dispatch (fictional)
+          - 'generic "knowledge at 0: Drill begins" [ref=f14e60]'
+          - 'generic "knowledge at 2: Dispatch writes a wind note" [ref=f14e62]'
+          - 'generic "decision at 3: Suggest holding the acoustic set" [ref=f14e64]'
+          - 'generic "knowledge at 3: Crowd grows" [ref=f14e66]'
+        - 'listitem "Field Lead (fictional): 4 marks" [ref=f14e68]':
+          - generic [ref=f14e69]: Field Lead (fictional)
+          - 'generic "knowledge at 0: Drill begins" [ref=f14e70]'
+          - 'generic "knowledge at 1: Field sees a gust" [ref=f14e72]'
+          - 'generic "knowledge at 3: Crowd grows" [ref=f14e74]'
+          - 'generic "knowledge at 3: Message 1 from dispatch" [ref=f14e76]'
+      - paragraph [ref=f14e78]:
+        - button "Run again" [ref=f14e79] [cursor=pointer]
+  - contentinfo [ref=f14e51]:
+    - status [ref=f14e52]:
+      - paragraph [ref=f14e53]: Resumed your saved run.
