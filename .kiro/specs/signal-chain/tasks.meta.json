@@ -147,6 +147,11 @@
         "executionId": "8ffaa5b6-9e4c-4ad7-98a7-f47cbd6994df",
         "chatSessionId": "sess_190d5a0c-211e-4b78-8dc1-38346d0435f5",
         "timestamp": 1794730104427
+      },
+      {
+        "executionId": "c5a01b85-c36e-4f81-93b3-8a17ce31052c",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795464031379
       }
     ],
     "**C2. Permission fallback.** Mic denied/unavailable → fall back to loopback or": [
@@ -154,6 +159,26 @@
         "executionId": "8ffaa5b6-9e4c-4ad7-98a7-f47cbd6994df",
         "chatSessionId": "sess_190d5a0c-211e-4b78-8dc1-38346d0435f5",
         "timestamp": 1794730104453
+      },
+      {
+        "executionId": "8706f40d-7600-4609-a65e-7529214d4b5f",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795464281682
+      },
+      {
+        "executionId": "8706f40d-7600-4609-a65e-7529214d4b5f",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795464383922
+      },
+      {
+        "executionId": "219a922c-9e76-42ef-ba4a-f71405d085b4",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795464403287
+      },
+      {
+        "executionId": "fc1b7a3c-1ecd-47fd-8190-a233e75825ad",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795466228109
       }
     ],
     "**C3. Manual audio checks.** Real speaker→mic at 1 m between two laptops:": [

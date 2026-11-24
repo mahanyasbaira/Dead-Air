@@ -75,15 +75,17 @@ and scripted transports are playable in two tabs / solo here._
 
 ## Phase C — acoustic transport (hardware; last)
 
-- [ ] **C1. AudioWorklet shell + acoustic transport.** Implement
+- [x] **C1. AudioWorklet shell + acoustic transport.** Implement
   `src/transport/acoustic.ts` over Web Audio: thin worklet shell around the pure
   B1 demodulator; half-duplex (no decode while transmitting, Req 2.3). Report
   measured airtime and signal level as event metadata (Req 4.3); unit-test the
   metadata-shaping function with synthetic inputs.
 
-- [ ] **C2. Permission fallback.** Mic denied/unavailable → fall back to loopback or
+- [x] **C2. Permission fallback.** Mic denied/unavailable → fall back to loopback or
   scripted and surface the reason in text (Req 4.2). Example test on the selection
   path with a mocked `getUserMedia` rejection.
+  _Note (2026-11-23): the selection function (`select.ts`) and its tests landed. C2 stays open until the reason is visible on screen through consoles 11.1._
+  _Note (2026-11-23): an unanswered permission request times out after 10 s (`MIC_TIMEOUT_MS`) with its own reason, and Solo stays available. A result that arrives after the timeout, after Solo or Two tabs is chosen, or after unmount is stale: its tracks are stopped, no acoustic transport is built, and `onStart` is not called. A late rejection is ignored._
 
 - [ ] **C3. Manual audio checks.** Real speaker→mic at 1 m between two laptops:
   record steps, recovery rate and pass/fail in `docs/RESULTS.md`. Per modem
