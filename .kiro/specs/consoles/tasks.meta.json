@@ -1,0 +1,529 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1. Set up UI module structure and shared types": [
+      {
+        "executionId": "219a922c-9e76-42ef-ba4a-f71405d085b4",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795464419882
+      },
+      {
+        "executionId": "219a922c-9e76-42ef-ba4a-f71405d085b4",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795464510645
+      }
+    ],
+    "11.1 Implement `Entry` in `src/ui/shell/Entry.tsx`": [
+      {
+        "executionId": "18c8b317-002e-48f4-b8e8-8871e0ff47a6",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795464554120
+      },
+      {
+        "executionId": "18c8b317-002e-48f4-b8e8-8871e0ff47a6",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795464828858
+      },
+      {
+        "executionId": "25605f50-e4c4-424f-858b-61455c694c3f",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795465453558
+      },
+      {
+        "executionId": "25605f50-e4c4-424f-858b-61455c694c3f",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795465560728
+      }
+    ],
+    "2.1 Implement `carrierState` in `src/ui/consoles/booth/carrier.ts`": [
+      {
+        "executionId": "18c8b317-002e-48f4-b8e8-8871e0ff47a6",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795464828962
+      },
+      {
+        "executionId": "18c8b317-002e-48f4-b8e8-8871e0ff47a6",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795464986281
+      }
+    ],
+    "2.3 Implement `composerBudget` in `src/ui/consoles/booth/composer.ts`": [
+      {
+        "executionId": "18c8b317-002e-48f4-b8e8-8871e0ff47a6",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795464829076
+      },
+      {
+        "executionId": "18c8b317-002e-48f4-b8e8-8871e0ff47a6",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795464986374
+      }
+    ],
+    "2.5 Implement `toPrintLine` in `src/ui/consoles/booth/garbled.ts`": [
+      {
+        "executionId": "18c8b317-002e-48f4-b8e8-8871e0ff47a6",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795464830488
+      },
+      {
+        "executionId": "18c8b317-002e-48f4-b8e8-8871e0ff47a6",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795464987023
+      },
+      {
+        "executionId": "ae85c5ce-0c05-4adb-865c-5a407dde0692",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795465012059
+      },
+      {
+        "executionId": "65b772e7-c462-4712-9ef5-2b177d21f903",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795465256260
+      },
+      {
+        "executionId": "65b772e7-c462-4712-9ef5-2b177d21f903",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795465354420
+      }
+    ],
+    "3.1 Implement `foldHistory` in `src/ui/consoles/tower/history.ts`": [
+      {
+        "executionId": "18c8b317-002e-48f4-b8e8-8871e0ff47a6",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795464831016
+      },
+      {
+        "executionId": "18c8b317-002e-48f4-b8e8-8871e0ff47a6",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795464989015
+      },
+      {
+        "executionId": "25605f50-e4c4-424f-858b-61455c694c3f",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795465565584
+      }
+    ],
+    "4.1 Implement the console log + decision-lock logic in `src/ui/shell/log.ts`": [
+      {
+        "executionId": "18c8b317-002e-48f4-b8e8-8871e0ff47a6",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795464831840
+      },
+      {
+        "executionId": "ae85c5ce-0c05-4adb-865c-5a407dde0692",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795465003539
+      }
+    ],
+    "2. Booth pure logic: carrier lamp, composer budget, garbled print line": [
+      {
+        "executionId": "18c8b317-002e-48f4-b8e8-8871e0ff47a6",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795464987047
+      }
+    ],
+    "3. Tower pure logic: message history fold": [
+      {
+        "executionId": "18c8b317-002e-48f4-b8e8-8871e0ff47a6",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795464989055
+      }
+    ],
+    "4.3 Implement run persistence in `src/ui/shell/persist.ts`": [
+      {
+        "executionId": "65b772e7-c462-4712-9ef5-2b177d21f903",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795465355155
+      },
+      {
+        "executionId": "25605f50-e4c4-424f-858b-61455c694c3f",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795465566935
+      },
+      {
+        "executionId": "25605f50-e4c4-424f-858b-61455c694c3f",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795465659932
+      }
+    ],
+    "6.1 Implement the audio bus in `src/ui/fx/audio/bus.ts`": [
+      {
+        "executionId": "65b772e7-c462-4712-9ef5-2b177d21f903",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795465355992
+      },
+      {
+        "executionId": "25605f50-e4c4-424f-858b-61455c694c3f",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795465567435
+      },
+      {
+        "executionId": "25605f50-e4c4-424f-858b-61455c694c3f",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795465660630
+      }
+    ],
+    "4. Run log, decision lock, and persistence (pure)": [
+      {
+        "executionId": "25605f50-e4c4-424f-858b-61455c694c3f",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795465659967
+      }
+    ],
+    "5. Checkpoint — pure console logic": [
+      {
+        "executionId": "25605f50-e4c4-424f-858b-61455c694c3f",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795465669913
+      },
+      {
+        "executionId": "25605f50-e4c4-424f-858b-61455c694c3f",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795465808215
+      }
+    ],
+    "6.3 Implement `StatusLine` in `src/ui/shell/StatusLine.tsx`": [
+      {
+        "executionId": "25605f50-e4c4-424f-858b-61455c694c3f",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795465814096
+      },
+      {
+        "executionId": "25605f50-e4c4-424f-858b-61455c694c3f",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795465895743
+      },
+      {
+        "executionId": "fc1b7a3c-1ecd-47fd-8190-a233e75825ad",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795466227259
+      }
+    ],
+    "6. Audio bus with mandatory status twin": [
+      {
+        "executionId": "25605f50-e4c4-424f-858b-61455c694c3f",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795465895770
+      }
+    ],
+    "7.2 Implement the waterfall in `src/ui/fx/waterfall/Waterfall.tsx`": [
+      {
+        "executionId": "fc1b7a3c-1ecd-47fd-8190-a233e75825ad",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795465939065
+      }
+    ],
+    "7.2 Implement the static SVG signal indicator in `src/ui/fx/waterfall/SignalIndicator.tsx`": [
+      {
+        "executionId": "fc1b7a3c-1ecd-47fd-8190-a233e75825ad",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795466224460
+      }
+    ],
+    "7.1 Implement `CrtLayer` in `src/ui/fx/crt/CrtLayer.tsx`": [
+      {
+        "executionId": "fc1b7a3c-1ecd-47fd-8190-a233e75825ad",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795466224534
+      }
+    ],
+    "7. FX layers: CRT post-process and waterfall": [
+      {
+        "executionId": "fc1b7a3c-1ecd-47fd-8190-a233e75825ad",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795466224560
+      }
+    ],
+    "7.3 Write unit tests for the pure signal indicator model (`signal.ts`)": [
+      {
+        "executionId": "fc1b7a3c-1ecd-47fd-8190-a233e75825ad",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795466226283
+      }
+    ],
+    "2.2 Write property test for carrier state mapping": [
+      {
+        "executionId": "fc1b7a3c-1ecd-47fd-8190-a233e75825ad",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795466233090
+      }
+    ],
+    "2.4 Write property test for composer budget": [
+      {
+        "executionId": "fc1b7a3c-1ecd-47fd-8190-a233e75825ad",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795466234085
+      }
+    ],
+    "2.6 Write property test for garbled marking": [
+      {
+        "executionId": "fc1b7a3c-1ecd-47fd-8190-a233e75825ad",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795466235082
+      }
+    ],
+    "3.2 Write property test for Tower history": [
+      {
+        "executionId": "fc1b7a3c-1ecd-47fd-8190-a233e75825ad",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795466236633
+      }
+    ],
+    "4.2 Write property test for decision lock": [
+      {
+        "executionId": "fc1b7a3c-1ecd-47fd-8190-a233e75825ad",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795466237571
+      }
+    ],
+    "4.4 Write property test for persistence round-trip": [
+      {
+        "executionId": "fc1b7a3c-1ecd-47fd-8190-a233e75825ad",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795466239087
+      }
+    ],
+    "6.2 Write property test for sound text twin": [
+      {
+        "executionId": "fc1b7a3c-1ecd-47fd-8190-a233e75825ad",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795466240592
+      }
+    ],
+    "8.1 Implement `BoothConsole` and its parts in `src/ui/consoles/booth/`": [
+      {
+        "executionId": "fc1b7a3c-1ecd-47fd-8190-a233e75825ad",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795466241677
+      },
+      {
+        "executionId": "fc1b7a3c-1ecd-47fd-8190-a233e75825ad",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795466535855
+      }
+    ],
+    "9.1 Implement `TowerConsole` and its parts in `src/ui/consoles/tower/`": [
+      {
+        "executionId": "fc1b7a3c-1ecd-47fd-8190-a233e75825ad",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795466243090
+      },
+      {
+        "executionId": "fc1b7a3c-1ecd-47fd-8190-a233e75825ad",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795466536322
+      }
+    ],
+    "10.1 Implement `DecisionPrompt` in `src/ui/shell/DecisionPrompt.tsx`": [
+      {
+        "executionId": "fc1b7a3c-1ecd-47fd-8190-a233e75825ad",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795466244075
+      },
+      {
+        "executionId": "fc1b7a3c-1ecd-47fd-8190-a233e75825ad",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795466675582
+      }
+    ],
+    "8. Booth console component": [
+      {
+        "executionId": "fc1b7a3c-1ecd-47fd-8190-a233e75825ad",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795466535898
+      }
+    ],
+    "9. Tower console component": [
+      {
+        "executionId": "fc1b7a3c-1ecd-47fd-8190-a233e75825ad",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795466536362
+      }
+    ],
+    "8.2 Write unit tests for Booth rendering and over-limit block": [
+      {
+        "executionId": "fc1b7a3c-1ecd-47fd-8190-a233e75825ad",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795466537602
+      }
+    ],
+    "9.2 Write unit tests for Tower chrome and inbound alert": [
+      {
+        "executionId": "fc1b7a3c-1ecd-47fd-8190-a233e75825ad",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795466538109
+      }
+    ],
+    "10.2 Write unit test for no-correctness-affordance": [
+      {
+        "executionId": "fc1b7a3c-1ecd-47fd-8190-a233e75825ad",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795466539710
+      }
+    ],
+    "10. Shared decision prompt": [
+      {
+        "executionId": "fc1b7a3c-1ecd-47fd-8190-a233e75825ad",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795466675667
+      }
+    ],
+    "11.3 Implement `ConsoleFrame` in `src/ui/shell/ConsoleFrame.tsx`": [
+      {
+        "executionId": "09bf4923-848c-460b-9ccf-43bdf8b95e40",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795466733803
+      },
+      {
+        "executionId": "09bf4923-848c-460b-9ccf-43bdf8b95e40",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795466835914
+      }
+    ],
+    "11.2 Implement `RunHost` in `src/ui/shell/RunHost.tsx`": [
+      {
+        "executionId": "09bf4923-848c-460b-9ccf-43bdf8b95e40",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795466836791
+      },
+      {
+        "executionId": "d320c4f9-c399-4c04-b65e-7a9d62938504",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795467092783
+      },
+      {
+        "executionId": "d320c4f9-c399-4c04-b65e-7a9d62938504",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795468069723
+      },
+      {
+        "executionId": "5c650f49-b173-4030-9f23-c931a83f6c64",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795483599959
+      },
+      {
+        "executionId": "5c650f49-b173-4030-9f23-c931a83f6c64",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795484268153
+      }
+    ],
+    "11. Shell: Entry, RunHost, ConsoleFrame": [
+      {
+        "executionId": "d320c4f9-c399-4c04-b65e-7a9d62938504",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795468069771
+      }
+    ],
+    "12.1 Write keyboard and focus accessibility tests": [
+      {
+        "executionId": "d320c4f9-c399-4c04-b65e-7a9d62938504",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795468069797
+      },
+      {
+        "executionId": "d320c4f9-c399-4c04-b65e-7a9d62938504",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795468312776
+      }
+    ],
+    "12. Accessibility pass": [
+      {
+        "executionId": "d320c4f9-c399-4c04-b65e-7a9d62938504",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795468312804
+      }
+    ],
+    "11.4 Write unit tests for Entry and RunHost": [
+      {
+        "executionId": "d320c4f9-c399-4c04-b65e-7a9d62938504",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795468313668
+      },
+      {
+        "executionId": "d320c4f9-c399-4c04-b65e-7a9d62938504",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795468543372
+      }
+    ],
+    "12.2 Write reduced-motion tests": [
+      {
+        "executionId": "d320c4f9-c399-4c04-b65e-7a9d62938504",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795468314264
+      },
+      {
+        "executionId": "d320c4f9-c399-4c04-b65e-7a9d62938504",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795468543753
+      }
+    ],
+    "13.1 Mount the Shell as the app entry": [
+      {
+        "executionId": "d320c4f9-c399-4c04-b65e-7a9d62938504",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795468543957
+      },
+      {
+        "executionId": "a912e406-a875-41b0-bc24-7383d25e5252",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795482158987
+      }
+    ],
+    "13. Wire the app together and record non-PBT checks": [
+      {
+        "executionId": "a912e406-a875-41b0-bc24-7383d25e5252",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795482159015
+      }
+    ],
+    "13.2 Write offline smoke test and record contrast audit": [
+      {
+        "executionId": "a912e406-a875-41b0-bc24-7383d25e5252",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795482163256
+      },
+      {
+        "executionId": "5c650f49-b173-4030-9f23-c931a83f6c64",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795482845854
+      },
+      {
+        "executionId": "5c650f49-b173-4030-9f23-c931a83f6c64",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795483574447
+      }
+    ],
+    "14. Final checkpoint — all checks pass": [
+      {
+        "executionId": "a912e406-a875-41b0-bc24-7383d25e5252",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795482685727
+      },
+      {
+        "executionId": "a912e406-a875-41b0-bc24-7383d25e5252",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795482798595
+      },
+      {
+        "executionId": "5c650f49-b173-4030-9f23-c931a83f6c64",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795484274371
+      },
+      {
+        "executionId": "5c650f49-b173-4030-9f23-c931a83f6c64",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795484417486
+      },
+      {
+        "executionId": "22167b6f-f664-499c-be7f-9cdbee3ec5b0",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795497177789
+      },
+      {
+        "executionId": "22167b6f-f664-499c-be7f-9cdbee3ec5b0",
+        "chatSessionId": "sess_5707143b-6bb8-47c8-b1da-53843f8e50f7",
+        "timestamp": 1795497296079
+      }
+    ]
+  }
+}

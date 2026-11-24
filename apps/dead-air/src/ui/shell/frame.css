@@ -1,0 +1,78 @@
+/*
+ * Console frame. Classes are prefixed `frame-`. 12-column grid, 8 px baseline,
+ * left-aligned, hairlines only. No gradient, shadow, glow or blur.
+ */
+.frame {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: 24px;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px 24px 48px;
+  color: var(--ink, #1a1916);
+  font: 400 15px/24px var(--sans, "IBM Plex Sans", system-ui, sans-serif);
+}
+.frame > * {
+  grid-column: 1 / span 12;
+  min-width: 0;
+}
+.frame-bar {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  border-top: 1px solid var(--ink, #1a1916);
+  border-bottom: 1px solid var(--grey-3, #ddd9cf);
+  padding: 8px 0;
+  margin-bottom: 24px;
+}
+.frame-marker {
+  margin: 0;
+  font-weight: 500;
+}
+.frame-mute {
+  font: 400 13px/24px var(--sans, "IBM Plex Sans", system-ui, sans-serif);
+  color: var(--ink, #1a1916);
+  background: transparent;
+  border: 1px solid var(--ink, #1a1916);
+  border-radius: 2px;
+  padding: 3px 12px;
+  cursor: pointer;
+}
+.frame-mute[aria-pressed="true"] {
+  background: var(--ink, #1a1916);
+  color: var(--paper, #f5f2ea);
+}
+.frame-mute:active {
+  transform: translateY(1px);
+}
+.frame-mute:focus-visible {
+  outline: 2px solid var(--ink, #1a1916);
+  outline-offset: 2px;
+}
+.frame-title {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin: 0 0 16px;
+}
+.frame-console {
+  margin: 0 0 24px;
+  overflow-wrap: anywhere;
+}
+.frame-status {
+  border-top: 1px solid var(--grey-3, #ddd9cf);
+  padding-top: 8px;
+}
+/* One column, no horizontal scroll, from 360 px. */
+@media (max-width: 640px) {
+  .frame {
+    padding: 16px 16px 32px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .frame-mute:active {
+    transform: none;
+  }
+}

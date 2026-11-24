@@ -1,0 +1,99 @@
+/*
+ * Booth console. Static, left-aligned, no gradient, shadow, glow or blur.
+ * 8 px baseline. Accent only for loss. Colours fall back if styles.css is absent.
+ */
+.booth {
+  max-width: 62ch;
+  margin: 0;
+  padding: 24px;
+  color: var(--ink, #1a1916);
+  font: 400 15px/24px var(--sans, "IBM Plex Sans", system-ui, sans-serif);
+}
+.booth-title {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin: 0 0 16px;
+}
+.booth p {
+  margin: 0;
+}
+.booth-label {
+  font-weight: 500;
+}
+.booth-num,
+.booth-text {
+  font-family: var(--mono, "IBM Plex Mono", ui-monospace, monospace);
+  font-variant-numeric: tabular-nums;
+}
+.booth-meta {
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--grey-1, #6b6861);
+}
+.booth-loss {
+  color: var(--loss, #9a3b26);
+}
+.booth-printer {
+  margin: 24px 0;
+  border-top: 1px solid var(--grey-3, #ddd9cf);
+}
+.booth-lines {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.booth-entry {
+  border-bottom: 1px solid var(--grey-3, #ddd9cf);
+  padding: 8px 0;
+}
+.booth-from {
+  font-size: 13px;
+  color: var(--grey-1, #6b6861);
+}
+.booth-composer {
+  border-top: 1px solid var(--ink, #1a1916);
+  padding-top: 16px;
+}
+.booth-input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 4px 0 8px;
+  padding: 8px;
+  border: 1px solid var(--ink, #1a1916);
+  border-radius: 2px;
+  background: transparent;
+  color: inherit;
+  font: 400 15px/24px var(--mono, "IBM Plex Mono", ui-monospace, monospace);
+}
+.booth-send {
+  margin-top: 8px;
+  padding: 8px 24px;
+  border: 1px solid var(--ink, #1a1916);
+  border-radius: 2px;
+  background: var(--ink, #1a1916);
+  color: var(--paper, #f5f2ea);
+  font: 500 15px/24px var(--sans, "IBM Plex Sans", system-ui, sans-serif);
+  cursor: pointer;
+}
+.booth-send:active {
+  transform: translateY(1px);
+}
+.booth-send:disabled {
+  background: transparent;
+  color: var(--grey-1, #6b6861);
+  border-color: var(--grey-2, #a9a59b);
+  cursor: not-allowed;
+}
+.booth button:focus-visible,
+.booth input:focus-visible {
+  outline: 2px solid var(--ink, #1a1916);
+  outline-offset: 2px;
+}
+.signal-indicator {
+  margin: 8px 0;
+  font-size: 13px;
+  color: var(--grey-1, #6b6861);
+}

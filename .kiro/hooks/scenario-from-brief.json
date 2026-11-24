@@ -3,12 +3,12 @@
   "hooks": [
     {
       "name": "scenario-from-brief",
-      "description": "A new scenario brief becomes a validated scenario file plus its property test. This is how the kit grows new content. Agent action: uses credits.",
-      "trigger": "PostFileCreate",
+      "description": "A saved scenario brief becomes a validated scenario file beside it. This is how the kit grows new content. Agent action: uses credits on every save of a brief.",
+      "trigger": "PostFileSave",
       "matcher": "apps/[^/]+/scenarios/briefs/[^/]+\\.md$",
       "action": {
         "type": "agent",
-        "prompt": "A scenario brief was added. Read it and the scenario schema in packages/hindsight. Write the scenario file next to the other scenarios of that app, following every content rule in .kiro/steering/product.md (invented, no real institutions or procedures, none of the out-of-scope topics). Then add a property test asserting: it validates against the schema, every beat is reachable, the run always ends, every decision has at least two options, and for Dead Air every message fits in 64 bytes. Run that test and report the real result. If the brief asks for an out-of-scope topic, stop and say so instead of writing it."
+        "prompt": "A scenario brief was saved. Read it and the scenario schema in packages/hindsight. Write the scenario file beside it, in the scenarios folder of the same app (one level above briefs/), following every content rule in .kiro/steering/product.md (invented, no real institutions or procedures, none of the out-of-scope topics). The app's scenarios/scenarios.test.ts picks the file up by itself; if you also add a property test, assert that it validates against the schema, every beat is reachable, the run always ends, every decision has at least two options, and for Dead Air every message fits in 64 bytes. Run `pnpm test` for that app (pnpm --filter <app> test) and report the real result. Never edit anything under packages/hindsight. If the brief asks for an out-of-scope topic, stop and say so instead of writing it."
       }
     }
   ]

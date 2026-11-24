@@ -1,0 +1,176 @@
+/*
+ * Tower: a pager. Structure, not colour, sets it apart from the Booth: a narrow
+ * fixed column, a boxed display, three keys in a row, dense hairline lists.
+ * Left-aligned. No gradient, shadow or blur. Accent only for loss.
+ */
+.tower {
+  max-width: 400px;
+  color: var(--ink, #1a1916);
+  font: 400 15px/24px var(--sans, "IBM Plex Sans", system-ui, sans-serif);
+  text-align: left;
+}
+.tower-title {
+  margin: 0 0 8px;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+.tower-h {
+  display: block;
+  margin: 8px 0 0;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 500;
+}
+.tower-display {
+  border: 1px solid var(--ink, #1a1916);
+  border-radius: 0;
+  padding: 0 8px 8px;
+  margin: 8px 0;
+}
+.tower-hist {
+  max-height: 192px;
+  overflow-y: auto;
+  border-top: 1px solid var(--grey-3, #ddd9cf);
+}
+.tower-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.tower-row {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  column-gap: 8px;
+  margin: 0;
+  padding: 4px 0;
+  border-bottom: 1px solid var(--grey-3, #ddd9cf);
+}
+.tower-from {
+  color: var(--grey-1, #6b6861);
+  font-size: 13px;
+}
+.tower-text {
+  font-family: var(--mono, "IBM Plex Mono", ui-monospace, monospace);
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+.tower-mark {
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+}
+.tower-note {
+  grid-column: 2;
+  font-size: 13px;
+  color: var(--grey-1, #6b6861);
+}
+.tower-empty,
+.tower-meta {
+  margin: 0;
+  font-size: 13px;
+  color: var(--grey-1, #6b6861);
+}
+.tower-lost {
+  color: var(--loss, #9a3b26);
+  font-weight: 500;
+}
+.tower-block {
+  margin: 4px 0 0;
+  font-size: 13px;
+}
+.tower-alert {
+  border-top: 1px solid var(--grey-3, #ddd9cf);
+  padding-top: 4px;
+}
+.tower-lamp,
+.tower-line {
+  margin: 0;
+  font-size: 13px;
+}
+.tower-lamp-idle {
+  border-left: 2px dashed var(--grey-2, #a9a59b);
+  padding-left: 6px;
+  color: var(--grey-1, #6b6861);
+}
+.tower-lamp-new {
+  border-left: 2px solid var(--ink, #1a1916);
+  padding-left: 6px;
+  font-weight: 500;
+}
+.tower-lamp-lost {
+  border-left: 2px solid var(--loss, #9a3b26);
+  padding-left: 6px;
+  font-weight: 500;
+  color: var(--loss, #9a3b26);
+}
+.tower-keys {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 8px 0;
+}
+.tower-key {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 48px;
+  padding: 4px 8px;
+  border: 1px solid var(--ink, #1a1916);
+  border-radius: 2px;
+  background: var(--paper, #f5f2ea);
+  color: var(--ink, #1a1916);
+  font: 500 15px/24px var(--sans, "IBM Plex Sans", system-ui, sans-serif);
+  cursor: pointer;
+}
+.tower-key:active {
+  transform: translateY(1px);
+  background: var(--grey-3, #ddd9cf);
+}
+.tower-key-send {
+  border-width: 2px;
+}
+.tower-hint {
+  font: 400 13px/16px var(--mono, "IBM Plex Mono", ui-monospace, monospace);
+  color: var(--grey-1, #6b6861);
+}
+.tower-codes {
+  list-style: none;
+  margin: 0 0 8px;
+  padding: 0;
+  border-top: 1px solid var(--grey-3, #ddd9cf);
+}
+.tower-code {
+  padding: 4px 8px;
+  border-bottom: 1px solid var(--grey-3, #ddd9cf);
+  border-left: 2px dashed transparent;
+  cursor: pointer;
+}
+.tower-code-on {
+  border-left: 2px solid var(--ink, #1a1916);
+  font-weight: 500;
+}
+.tower-input {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 40px;
+  padding: 4px 8px;
+  border: 1px solid var(--ink, #1a1916);
+  border-radius: 2px;
+  background: transparent;
+  color: inherit;
+  font: 400 15px/24px var(--mono, "IBM Plex Mono", ui-monospace, monospace);
+}
+.tower-key:focus-visible,
+.tower-input:focus-visible,
+.tower-codes:focus-visible,
+.tower-hist:focus-visible {
+  outline: 2px solid var(--ink, #1a1916);
+  outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .tower * {
+    transition: none;
+  }
+}

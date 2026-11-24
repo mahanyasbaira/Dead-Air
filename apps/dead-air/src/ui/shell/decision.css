@@ -1,0 +1,70 @@
+/* Decision prompt. Plain text, left-aligned, no colour per option. */
+.decision {
+  max-width: 62ch;
+  color: var(--ink, #1a1916);
+  font: 400 15px/24px var(--sans, "IBM Plex Sans", system-ui, sans-serif);
+  text-align: left;
+}
+.decision-prompt {
+  margin: 0 0 16px;
+}
+.decision-options {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--grey-3, #ddd9cf);
+}
+.decision-options li {
+  border-bottom: 1px solid var(--grey-3, #ddd9cf);
+}
+.decision-option {
+  display: flex;
+  gap: 16px;
+  align-items: baseline;
+  width: 100%;
+  padding: 8px 0;
+  border: 0;
+  border-radius: 2px;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.decision-option[aria-pressed="true"] {
+  font-weight: 500;
+}
+.decision-option:focus-visible {
+  outline: 2px solid var(--ink, #1a1916);
+  outline-offset: 2px;
+}
+.decision-option:active:not(:disabled) {
+  transform: translateY(1px);
+}
+.decision-option:disabled {
+  cursor: default;
+  color: var(--grey-1, #6b6861);
+}
+.decision-key,
+.decision-time {
+  font-family: var(--mono, "IBM Plex Mono", ui-monospace, monospace);
+  font-variant-numeric: tabular-nums;
+}
+.decision-key {
+  min-width: 1ch;
+  color: var(--grey-1, #6b6861);
+  font-size: 13px;
+}
+.decision-chosen,
+.decision-note {
+  margin: 16px 0 0;
+}
+.decision-note {
+  color: var(--grey-1, #6b6861);
+  font-size: 13px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .decision-option {
+    transition: none;
+  }
+}

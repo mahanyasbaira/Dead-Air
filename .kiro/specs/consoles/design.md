@@ -7,6 +7,11 @@ capture, accessibility, and resilience/persistence. The consoles are the costume
 and the controls — they read engine state and dispatch events; they never mutate
 state directly.
 
+> **Note (developer, 2026-11-23):** where this design describes the CRT layer
+> (scanlines, curve, bloom), the all-caps `FICTION · DRILL` marker, or a centred
+> fixed-aspect panel, the "Decisions (developer, 2026-11-23)" section in
+> `tasks.md` takes precedence, together with `design-language.md`.
+
 ## Overview
 
 The consoles sit at the top of the one-way import chain
@@ -165,6 +170,11 @@ signatures are settled during task execution.
   audio link, scrolling at a fixed rate. Driven by an analyser node in acoustic
   mode and by a synthesised spectrum from transport state in solo/loopback so the
   instrument reads the same in every mode.
+  _Note (developer, 2026-11-23): replaced by a static SVG signal indicator,
+  `SignalIndicator` with pure model `signal.ts` in the same folder. No Canvas, no
+  scroll, no synthesised spectrum. It draws only the acoustic transport's
+  per-burst `airtimeMs`, `rms`, `dbfs`, `peak`; solo, loopback and acoustic
+  before the first burst show plain "unavailable" text. See tasks 7.2 and 7.3._
 - **`CarrierLamp`** — shows `IDLE | SENDING | RECEIVING | COLLISION` as both a
   coloured lamp and a text state (Req 2.1). State is a pure function of
   `transport.mode` plus the most recent outcome kind.
@@ -234,14 +244,21 @@ interface PersistedRun {
   log: ConsoleLogEntry[];
 }
 
+/** One printed character; its bytes are [byteStart, byteStart + byteLength). */
+interface PrintGlyph {
+  ch: string;          // decoded character, or a marker glyph
+  garbled: boolean;    // a byte in it was reported undecodable (damage)
+  invalid: boolean;    // intact bytes that are not valid UTF-8 (not damage)
+  byteStart: number;
+  byteLength: number;  // >= 1
+}
 /** A line to print on the Booth teleprinter. */
 interface PrintLine {
-  /** Decoded text with undecodable bytes replaced by a marker glyph. */
-  glyphs: Array<{ ch: string; garbled: boolean }>;
-  /** Accessible summary, e.g. "message from Tower, 3 bytes unreadable". */
+  /** Glyph byte spans tile the payload exactly, in order. */
+  glyphs: PrintGlyph[];
+  /** Accessible summary, e.g. "12 characters, 1 could not be read." */
   label: string;
 }
-
 /** Live composer budget shown as the player types (Req 2.2). */
 interface ComposerBudget {
   usedBytes: number;      // UTF-8 encoded length
@@ -298,13 +315,21 @@ transport is at most 64 bytes.
 **Validates: Requirements 2.2**
 
 ### Property 3: Garbled bytes are marked, never hidden
-
 *For any* received payload with an arbitrary subset of positions flagged
-undecodable, the produced print line has one glyph per payload position (nothing
-is dropped), and the glyphs flagged `garbled` are exactly the undecodable
-positions.
-
+undecodable, the glyph byte spans cover every payload byte exactly once, in
+order, and every undecodable position falls in a glyph flagged `garbled`. A glyph
+is `garbled` only if it covers an undecodable position. Intact valid UTF-8 prints
+as its characters (decoded by code point, not grapheme cluster); intact bytes
+that are not valid UTF-8 are flagged `invalid` with a distinct marker and never
+decoded with silent replacement characters. The label counts glyphs, and the
+"could not be read" number counts garbled plus invalid glyphs.
 **Validates: Requirements 2.3**
+
+> **Change, 2026-11-23 (developer-approved correction).** The earlier rule was
+> one glyph per byte, which printed every intact non-ASCII byte as a dot, so
+> "Café" or an emoji sent through the composer (UTF-8, cut at code points) came
+> out unreadable with no damage. `PrintLine` glyphs now carry a byte span and an
+> `invalid` flag, and Property 3 is stated over spans instead of one glyph per byte.
 
 ### Property 4: Tower keeps exactly the last 8 messages in order
 
@@ -346,6 +371,7 @@ derived state).
   microphone permission denied for acoustic, `BroadcastChannel` unsupported for
   two tabs), the Entry screen surfaces a plain text reason and keeps Solo
   available as a fallback. No stack traces, no silent dead console.
+  A microphone request with no answer ends after 10 s with its own reason; a stream that arrives later is released and never starts the run.
 - **Garbled frames.** A bad-CRC frame arrives as a `garbled` outcome and is
   rendered with its undecodable bytes marked (Property 3). It is never dropped and
   never silently "fixed" — consistent with the signal-chain contract.
@@ -359,6 +385,7 @@ derived state).
   `PersistedRun` fails validation (bad JSON, unknown `version`, unknown
   `scenarioId`), the Shell discards it, starts a fresh run, and tells the user the
   previous run could not be restored rather than crashing.
+  _(2026-11-23: superseded for saved data: the stored run is kept, not discarded. See the note under task 11.2 in `tasks.md`.)_
 - **Decision after lock.** A change attempt once a decision is locked is a no-op
   with a text explanation; the engine reducer is the authority (Property 5).
 - **Audio before gesture.** The audio bus never plays before a user gesture;

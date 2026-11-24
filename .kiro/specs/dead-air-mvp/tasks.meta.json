@@ -1,0 +1,63 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "Add an accessible, cohesive visual design and reduced-motion behavior.": [
+      {
+        "executionId": "3d7d5099-32f5-4a53-a914-c7f2d6618d6f",
+        "chatSessionId": "sess_7346e6f5-d533-4c8c-b9d8-0d24312c8605",
+        "timestamp": 1795237385431
+      },
+      {
+        "executionId": "3d7d5099-32f5-4a53-a914-c7f2d6618d6f",
+        "chatSessionId": "sess_7346e6f5-d533-4c8c-b9d8-0d24312c8605",
+        "timestamp": 1795239799166
+      }
+    ],
+    "Test delayed delivery, ordering, reset, keyboard access, and the full demo journey. Record commands and results.": [
+      {
+        "executionId": "b2df591e-1381-4d20-a560-100e305e72da",
+        "chatSessionId": "sess_41030bba-110c-487b-b377-5725adae284b",
+        "timestamp": 1795239822578
+      },
+      {
+        "executionId": "b2df591e-1381-4d20-a560-100e305e72da",
+        "chatSessionId": "sess_41030bba-110c-487b-b377-5725adae284b",
+        "timestamp": 1795239825877
+      },
+      {
+        "executionId": "0504c295-c612-4da1-a52b-36409a40037c",
+        "chatSessionId": "sess_71433a08-f81d-4c51-9c91-7ec391672b39",
+        "timestamp": 1795239887456
+      },
+      {
+        "executionId": "0504c295-c612-4da1-a52b-36409a40037c",
+        "chatSessionId": "sess_71433a08-f81d-4c51-9c91-7ec391672b39",
+        "timestamp": 1795239891002
+      }
+    ],
+    "Gather feedback from at least two willing prospective users; record findings without claiming impact that has not been measured.": [
+      {
+        "executionId": "b2df591e-1381-4d20-a560-100e305e72da",
+        "chatSessionId": "sess_41030bba-110c-487b-b377-5725adae284b",
+        "timestamp": 1795239822620
+      },
+      {
+        "executionId": "0504c295-c612-4da1-a52b-36409a40037c",
+        "chatSessionId": "sess_71433a08-f81d-4c51-9c91-7ec391672b39",
+        "timestamp": 1795239887535
+      }
+    ],
+    "Prepare a deployable demo and submission materials only after the app works. Choose an open-source license, publish a public GitHub repo with `.kiro`, provide a public YouTube demo under three minutes, and review all current contest rules.": [
+      {
+        "executionId": "b2df591e-1381-4d20-a560-100e305e72da",
+        "chatSessionId": "sess_41030bba-110c-487b-b377-5725adae284b",
+        "timestamp": 1795239822648
+      },
+      {
+        "executionId": "0504c295-c612-4da1-a52b-36409a40037c",
+        "chatSessionId": "sess_71433a08-f81d-4c51-9c91-7ec391672b39",
+        "timestamp": 1795239887557
+      }
+    ]
+  }
+}
