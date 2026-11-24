@@ -20,3 +20,7 @@ AGENTS.md
 
 # local tool state
 .omx/
+
+# browser-automation scratch and nightly machine reports
+.playwright-mcp/
+reports/night/*.md
